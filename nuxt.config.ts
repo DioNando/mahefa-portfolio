@@ -23,13 +23,12 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      apiUrl: process.env.API_URL,
       emojisApiUrl: process.env.EMOJIS_API_URL
     },
   },
   css: [
-    "vuetify/lib/styles/main.sass",
-    "@mdi/font/css/materialdesignicons.min.css",
+    // "vuetify/lib/styles/main.sass",
+    // "@mdi/font/css/materialdesignicons.min.css",
     "~/assets/scss/style.scss",
   ],
 })
