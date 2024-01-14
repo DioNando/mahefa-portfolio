@@ -19,10 +19,10 @@ export default {
       theme,
       toggleTheme: () => {
         if (theme.global.current.value.dark) {
-          theme.global.name.value = "light";
+          theme.global.name.value = "myCustomLightTheme";
           iconTheme.value = "mdi-white-balance-sunny";
         } else {
-          theme.global.name.value = "dark";
+          theme.global.name.value = "myCustomDarkTheme";
           iconTheme.value = "mdi-moon-waxing-crescent";
         }
       },

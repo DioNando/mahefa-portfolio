@@ -1,19 +1,14 @@
-// import this after install `@mdi/font` package
-import '@mdi/font/css/materialdesignicons.css'
-
-import 'vuetify/styles'
-
 import { createVuetify, type ThemeDefinition } from "vuetify";
 import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
-
+import "vuetify/styles";
 import { fr } from "vuetify/locale";
 
 const myCustomLightTheme: ThemeDefinition = {
   dark: false,
   colors: {
     background: "#ffffff",
-    surface: "#ffffff",
+    surface: "#cccccc",
     primary: "#011126",
     "primary-darken-1": "#011126",
     secondary: "#28a6a8",
@@ -29,7 +24,7 @@ const myCustomDarkTheme: ThemeDefinition = {
   dark: true,
   colors: {
     background: "#000000",
-    surface: "#000000",
+    surface: "#262626",
     primary: "#011126",
     "primary-darken-1": "#011126",
     secondary: "#28a6a8",
@@ -41,8 +36,9 @@ const myCustomDarkTheme: ThemeDefinition = {
   },
 };
 
-export default defineNuxtPlugin((app) => {
+export default defineNuxtPlugin((nuxtApp) => {
   const vuetify = createVuetify({
+    ssr: true,
     components,
     directives,
     locale: {
@@ -53,9 +49,11 @@ export default defineNuxtPlugin((app) => {
     theme: {
       defaultTheme: "myCustomLightTheme",
       themes: {
-        myCustomLightTheme, myCustomDarkTheme
+        myCustomLightTheme,
+        myCustomDarkTheme,
       },
     },
   });
-  app.vueApp.use(vuetify)
-})
+
+  nuxtApp.vueApp.use(vuetify);
+});
