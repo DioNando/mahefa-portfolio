@@ -1,33 +1,26 @@
 <template>
   <div>
-    <v-btn variant="plain" @click="toggleTheme" icon>
-      <v-icon :icon="iconTheme"></v-icon>
-    </v-btn>
+    <v-switch color="primary" v-model="isDark" hide-details inset false-icon="mdi-white-balance-sunny"
+      true-icon="mdi-moon-waxing-crescent" @change="toggleTheme"></v-switch>
   </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { useTheme } from "vuetify";
 
-export default {
-  setup() {
-    const theme = useTheme();
-    const iconTheme = ref("mdi-white-balance-sunny");
+const customTheme = useTheme();
 
-    return {
-      iconTheme,
-      theme,
-      toggleTheme: () => {
-        if (theme.global.current.value.dark) {
-          theme.global.name.value = "myCustomLightTheme";
-          iconTheme.value = "mdi-white-balance-sunny";
-        } else {
-          theme.global.name.value = "myCustomDarkTheme";
-          iconTheme.value = "mdi-moon-waxing-crescent";
-        }
-      },
-    };
-  },
+const theme = useThemeStore()
+
+const isDark = ref(theme.isDark);
+
+const toggleTheme = () => {
+  theme.setDark(isDark.value)
+  if (isDark.value) {
+    customTheme.global.name.value = "myCustomDarkTheme";
+  } else {
+    customTheme.global.name.value = "myCustomLightTheme";
+  }
 };
 </script>
 

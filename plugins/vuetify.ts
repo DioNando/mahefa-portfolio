@@ -1,3 +1,4 @@
+import "@mdi/font/css/materialdesignicons.css";
 import { createVuetify, type ThemeDefinition } from "vuetify";
 import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
@@ -8,35 +9,35 @@ const myCustomLightTheme: ThemeDefinition = {
   dark: false,
   colors: {
     background: "#ffffff",
-    surface: "#cccccc",
-    primary: "#011126",
-    "primary-darken-1": "#011126",
-    secondary: "#28a6a8",
-    "secondary-darken-1": "#28a6a8",
-    error: "#e74c3c",
-    info: "#31dec4",
-    success: "#86D47E",
-    warning: "#ff8606",
+    surface: "#ffffff",
+    primary: "#9f4118",
+    "primary-darken-1": "#187389",
+    secondary: "#de8047",
+    "secondary-darken-1": "#5e8699",
+    error: "#e63946",
+    info: "#ffb703",
+    success: "#16db65",
+    warning: "#fb8500",
   },
 };
 
 const myCustomDarkTheme: ThemeDefinition = {
   dark: true,
   colors: {
-    background: "#000000",
-    surface: "#262626",
-    primary: "#011126",
-    "primary-darken-1": "#011126",
-    secondary: "#28a6a8",
-    "secondary-darken-1": "#28a6a8",
-    error: "#e74c3c",
-    info: "#31dec4",
-    success: "#86D47E",
-    warning: "#ff8606",
+    background: "#1c1d23",
+    surface: "#343640",
+    primary: "#9f4118",
+    "primary-darken-1": "#187389",
+    secondary: "#de8047",
+    "secondary-darken-1": "#5e8699",
+    error: "#e63946",
+    info: "#ffb703",
+    success: "#16db65",
+    warning: "#fb8500",
   },
 };
 
-export default defineNuxtPlugin((nuxtApp) => {
+export default defineNuxtPlugin((app) => {
   const vuetify = createVuetify({
     ssr: true,
     components,
@@ -47,13 +48,12 @@ export default defineNuxtPlugin((nuxtApp) => {
       messages: { fr },
     },
     theme: {
-      defaultTheme: "myCustomLightTheme",
+      defaultTheme: "myCustomDarkTheme",
       themes: {
         myCustomLightTheme,
         myCustomDarkTheme,
       },
     },
   });
-
-  nuxtApp.vueApp.use(vuetify);
+  app.vueApp.use(vuetify);
 });

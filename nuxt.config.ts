@@ -1,31 +1,39 @@
-import vuetify from 'vite-plugin-vuetify'
+// https://nuxt.com/docs/api/configuration/nuxt-config
+import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
   build: {
-    transpile: ['vuetify'],
+    transpile: ["vuetify"],
   },
   modules: [
     (_options, nuxt) => {
-      nuxt.hooks.hook('vite:extendConfig', (config) => {
+      nuxt.hooks.hook("vite:extendConfig", (config) => {
         // @ts-expect-error
-        config.plugins.push(vuetify({ autoImport: true }))
-      })
+        config.plugins.push(vuetify({ autoImport: true }));
+      });
     },
-  ],
-  vite: {
-    define: {
-      'process.env.DEBUG': false,
-    },
-  },
-  css: [
-    "vuetify/lib/styles/main.sass",
-    "@mdi/font/css/materialdesignicons.min.css",
-    "~/assets/scss/style.scss",
+    "@pinia/nuxt",
+    "@hypernym/nuxt-anime",
+    "@nuxt/image",
+    "@nuxtjs/google-fonts",
+    "nuxt-aos",
   ],
   runtimeConfig: {
     public: {
-      emojisApiUrl: process.env.EMOJIS_API_URL
+      emojisApiUrl: process.env.EMOJIS_API_URL,
     },
   },
-})
+  vite: {
+    vue: {
+      template: {
+        transformAssetUrls,
+      },
+    },
+  },
+  css: ["~/assets/scss/style.scss"],
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
+    layoutTransition: { name: "layout", mode: "out-in" },
+  },
+});

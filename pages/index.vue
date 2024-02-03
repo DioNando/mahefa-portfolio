@@ -1,33 +1,44 @@
 <template>
-    <NuxtLayout>
-        <main>
-            <v-row>
-                <v-col v-for="(emoji, index) in emojis" :key="index">
-                    {{ emoji.character }}
-                </v-col>
-            </v-row>
-        </main>
-    </NuxtLayout>
+    <v-container>
+        <AccueilLandscape />
+        <AccueilProject />
+        <div class="text-center ma-6">
+            <!-- <img v-if="theme.isDark" src="/assets/img/flame-white.svg" style="width: 30%;" data-aos="fade-out" />
+                <img v-else src="/assets/img/flame.svg" style="width: 30%;" data-aos="fade-out" /> -->
+            <h1>Distinctio harum illum, error deleniti commod</h1>
+        </div>
+        <AccueilSkill :show-btn-service="true" />
+        <div class="text-center ma-6">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis fugit doloremque quia,
+                incidunt nisi architecto nesciunt vel! Nam nemo, distinctio harum illum, error deleniti commodi
+                sunt animi tempora
+                facilis
+                porro?</p>
+        </div>
+        <AccueilStory />
+        <AccueilEducation />
+    </v-container>
 </template>
 
 <script setup lang="ts">
-import { type EmojiInterface } from '~/interfaces/emoji.interface'
+import { onMounted } from 'vue';
+
+const theme = useThemeStore()
+const { $anime } = useNuxtApp()
 
 definePageMeta({
-    layout: "default",
-});
+    layout: 'default'
+})
 
-const config = useRuntimeConfig();
-const { data: emojis } = useFetch<EmojiInterface[]>(config.public.emojisApiUrl);
-
+onMounted(() => {
+    $anime({
+        targets: '.cube',
+        opacity: {
+            value: 1
+        },
+        delay: 250
+    })
+})
 </script>
-
-<style lang="scss" scoped>
-main {
-    display: grid;
-    align-content: center;
-    height: 100%;
-    gap: 2rem;
-}
-</style>
 
