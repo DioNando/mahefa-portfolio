@@ -27,6 +27,13 @@ export const useElementStore = defineStore("elementStore", {
           "Adipisci facilis ullam maxime ducimus aliquid quae repudiandae ratione modi cupiditate dolores recusandae odio odit molestiae provident porro dolor quis rem, dolorem atque voluptatem nostrum, nobis, deserunt numquam asperiores. Ipsa!",
       },
       {
+        title: "Emnis recusandae. Eos veniam eni",
+        type: "Gic eius",
+        icon: "mdi-puzzle",
+        description:
+          "Aporro dolor quis rem, dolorem atque voluptatem nostrum, nobis, bore quasi voluptates, expedita, commodi distinctio illum hic eius ratione eaque! Num deserunt numquam asperiores. Ipsa!",
+      },
+      {
         title: "Magni, numquam dolores!",
         type: "Magni",
         icon: "mdi-earth",
@@ -154,6 +161,19 @@ export const useElementStore = defineStore("elementStore", {
     getRandomElement(array: any): any {
       const randomIndex = Math.floor(Math.random() * array.length);
       return array[randomIndex];
+    },
+    capitalizeName(name: string): string {
+      const mots = name.split(" ");
+      const motsFormattes = mots.map(
+        (mot) => mot.charAt(0).toUpperCase() + mot.slice(1)
+      );
+      motsFormattes.shift();
+      const resultat = motsFormattes.join(" ");
+      return resultat;
+    },
+    separateName(name: string): string {
+      const mots = name.split("-");
+      return mots.join(" ");
     },
   },
 });

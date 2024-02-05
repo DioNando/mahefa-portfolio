@@ -9,8 +9,8 @@
         </div>
         <div class="card-content">
             <!-- <div class="card-description"> -->
-            <div class="card-title">{{ props.emoji.character + ' ' + store_emojis.capitalizeName(props.emoji.unicodeName) }}</div>
-            <div class="card-subtitle">{{ store_emojis.separateName(props.emoji.group.toUpperCase()) }}</div>
+            <div class="card-title">{{ props.emoji.character + ' ' + store_elements.capitalizeName(props.emoji.unicodeName) }}</div>
+            <div class="card-subtitle">{{ store_elements.separateName(props.emoji.group.toUpperCase()) }}</div>
             <div class="card-description">Lorem ipsum dolor sit a!</div>
             <!-- </div> -->
         </div>
@@ -19,7 +19,7 @@
 
 <script setup lang="ts">
 import { type EmojiInterface } from "~/interfaces/emoji.interface";
-const store_emojis = useEmojiStore()
+const store_elements = useElementStore()
 
 const props = defineProps<{
     data: any
@@ -34,13 +34,13 @@ const props = defineProps<{
     flex: 1;
     min-width: 250px;
     border-radius: 1rem;
-    // background-color: $surface;
-    border: 1px $primary solid;
+    background-color: $surface;
+    // border: 1px $primary solid;
     transition: 1s;
     border-radius: 0.25rem;
     height: auto;
     padding: 0.75rem;
-    // color: $light;
+    color: $light;
 
     &:hover {
         flex: 2;

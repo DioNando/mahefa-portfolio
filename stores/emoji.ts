@@ -15,18 +15,5 @@ export const useEmojiStore = defineStore("emojiStore", {
       const randomIndex = Math.floor(Math.random() * this.emojis.length);
       return this.emojis[randomIndex];
     },
-    capitalizeName(name: string): string {
-      const mots = name.split(" ");
-      const motsFormattes = mots.map(
-        (mot) => mot.charAt(0).toUpperCase() + mot.slice(1)
-      );
-      motsFormattes.shift();
-      const resultat = motsFormattes.join(" ");
-      return resultat;
-    },
-    separateName(name: string): string {
-      const mots = name.split("-");
-      return mots.join(" ");
-    },
   },
 });

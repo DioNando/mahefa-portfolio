@@ -3,6 +3,9 @@
         <v-row>
             <v-col class="d-flex align-center justify-center">
                 <!-- <img src="/assets/img/startup.svg" data-aos="fade-right" /> -->
+                <div style="width: 100%;">
+                    <IllustrationLandscape />
+                </div>
             </v-col>
             <v-col cols="auto" class="d-flex flex-column align-end justify-center ga-6">
                 <!-- <CubeThree class="cube" data-aos="zoom-in" /> -->
@@ -32,6 +35,7 @@ const emoji = store_emojis.getRandomEmoji()
 
 <style lang="scss" scoped>
 @import "~/assets/scss/_variables.scss";
+@import "~/assets/scss/_animations.scss";
 
 section {
     margin-top: 5vh;

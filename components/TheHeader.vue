@@ -96,7 +96,20 @@ const toggleSidebar = () => {
 
   &:hover {
     color: $primary;
-    transform: translateX(1rem);
+    // transform: translateX(1rem);
+  }
+
+  &::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: $primary;
+    display: block;
+    transition: 0.5s;
+  }
+
+  &:hover::after {
+    width: 100%;
   }
 }
 
@@ -110,13 +123,16 @@ const toggleSidebar = () => {
   position: absolute;
   opacity: 0;
   z-index: 11;
+  filter: blur(10px);
   // backdrop-filter: blur(10px);
-  transition: 500ms ease-in-out;
+  transition: 500ms;
+  // transition-timing-function: cubic-bezier(0.9, 0.1, 0.1, 0.1);
   overflow: hidden;
 
   .menu-links {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 2rem;
   }
 
@@ -141,13 +157,14 @@ const toggleSidebar = () => {
   position: fixed;
   padding: 4rem;
   opacity: 1;
-  border-right: 3px solid $tertiary;
+  border-right: 3px solid $primary;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow: auto;
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
+  filter: none;
 
   &::-webkit-scrollbar {
     width: 12px;
@@ -199,6 +216,5 @@ const toggleSidebar = () => {
     padding: 2rem;
   }
 }
-
 </style>
   

@@ -50,7 +50,7 @@
 const theme = useThemeStore()
 const store_elements = useElementStore()
 
-const colorWaveLight = '0, 219, 222'
+const colorWaveLight = '56, 163, 165'
 const colorWaveDark = '52, 54, 64'
 
 const posY = ref(0)

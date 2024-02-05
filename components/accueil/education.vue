@@ -29,7 +29,7 @@ section {
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
+    gap: 2rem;
     margin-bottom: 3rem;
 }
 
