@@ -7,8 +7,8 @@
                 <img v-else src="/assets/img/flame.svg" style="width: 30%;" data-aos="fade-out" /> -->
             <h1>Distinctio harum illum, error deleniti commod</h1>
         </div>
-        <AccueilSkill :show-btn-service="true" />
-        <div class="text-center ma-6">
+        <AccueilSkill />
+        <div class="text-center ma-12">
             <h1>Lorem ipsum dolor sit amet.</h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis fugit doloremque quia,
                 incidunt nisi architecto nesciunt vel! Nam nemo, distinctio harum illum, error deleniti commodi

@@ -3,7 +3,7 @@
   <div>
     <div class="menu" :class="[sidebarVisible ? 'menu-show' : '', theme.isDark ? 'menu-dark' : 'menu-light']">
       <div v-if="sidebarContentVisible" class="menu-links">
-        <NuxtLink v-for="l in links" :key="l.title" :to="l.link" class="router-link animation-link-in">
+        <NuxtLink v-for="l in store_elements.links" :key="l.title" :to="l.link" class="router-link animation-link-in">
           {{ l.title }}
         </NuxtLink>
       </div>
@@ -18,7 +18,7 @@
         </div>
 
         <div class="d-flex flex-column ga-5">
-          <v-icon v-for="(i, index) of icons" :key="index" :icon="i.name"
+          <v-icon v-for="(i, index) of store_elements.icons" :key="index" :icon="i.name"
             :color="theme.isDark ? 'light' : 'primary'"></v-icon>
         </div>
 
@@ -46,43 +46,10 @@ import anime from 'animejs';
 const { $anime } = useNuxtApp()
 
 const theme = useThemeStore()
+const store_elements = useElementStore()
 
 const sidebarVisible = ref(false)
 const sidebarContentVisible = ref(false)
-
-const links = [
-  {
-    title: "Home",
-    link: "/",
-  },
-  {
-    title: "Contact",
-    link: "/contact",
-  },
-  {
-    title: "About Me",
-    link: "/about-me",
-  },
-  {
-    title: "Resume",
-    link: "/resume",
-  },
-];
-
-const icons = [
-  {
-    name: "mdi-github",
-  },
-  {
-    name: "mdi-whatsapp",
-  },
-  {
-    name: "mdi-linkedin",
-  },
-  {
-    name: "mdi-instagram",
-  },
-]
 
 const toggleSidebar = () => {
   sidebarVisible.value = !sidebarVisible.value

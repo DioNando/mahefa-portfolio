@@ -1,7 +1,7 @@
 <template>
     <v-container>
         <div class="emojis">
-            <div v-for="(i, index) of emoji.emojis" class="ma-1">
+            <div v-for="(i, index) of store_emojis.emojis" class="ma-1">
                 <p>{{ i.character }}</p>
             </div>
         </div>
@@ -9,9 +9,9 @@
 </template>
 
 <script setup lang="ts">
-const emoji = useEmojiStore()
+const store_emojis = useEmojiStore()
 
-await callOnce(emoji.fetch)
+await callOnce(store_emojis.fetch)
 
 import anime from 'animejs';
 import { onMounted } from 'vue';
