@@ -1,84 +1,48 @@
 <template>
-    <div class="card">
-        <div class="card-header">
-            <NuxtImg :src="props.data.source" />
-            <div class="card-icon">
-                <!-- <v-icon icon="mdi-code-tags" color="primary"></v-icon> -->
-                <div>{{ props.emoji.character }}</div>
+    <v-card class="card pa-4 bg-background d-flex flex-column" variant="outlined">
+        <template v-slot:title>
+            <p class="text-h5 font-weight-bold title">{{ service.title }}</p>
+        </template>
+
+        <template v-slot:subtitle> {{ service.type }} </template>
+
+        <template v-slot:text>
+            <div>
+                {{ service.description }}
             </div>
-        </div>
-        <div class="card-content">
-            <!-- <div class="card-description"> -->
-            <div class="card-title">{{ store_emojis.capitalizeName(props.emoji.unicodeName) }}</div>
-            <div class="card-subtitle">{{ store_emojis.separateName(props.emoji.group.toUpperCase()) }}</div>
-            <div class="card-description">Lorem ipsum dolor sit a!</div>
-            <!-- </div> -->
-        </div>
-    </div>
+        </template>
+        <v-card-actions class="d-flex justify-space-between">
+            <v-icon :icon="service.icon" size="x-large"></v-icon>
+            <v-btn to="/resume" variant="outlined" color="primary" append-icon="mdi-chevron-right"
+                :class="[show ? '' : 'd-none']">
+                View more
+            </v-btn>
+        </v-card-actions>
+    </v-card>
 </template>
-
-<script setup lang="ts">
-import { type EmojiInterface } from "~/interfaces/emoji.interface";
-const store_emojis = useEmojiStore()
-
-const props = defineProps<{
-    data: any
-    emoji: EmojiInterface
-}>()
+  
+<script lang="ts" setup>
+const { service, show } = defineProps(["service", "show"]);
 </script>
-
+  
 <style lang="scss" scoped>
 @import "~/assets/scss/_variables.scss";
 
 .card {
-    flex: 1;
-    min-width: 250px;
-    border-radius: 1rem;
-    background-color: $secondary;
-    transition: 1s;
-    border-radius: 0.25rem;
-    height: auto;
-    padding: 0.25rem;
-
+    transition-duration: 400ms;
+    transition-property: box-shadow;
+    border: 1px $primary solid;
+    height: 100%;
 
     &:hover {
-        flex: 2;
-    }
+        box-shadow: rgba($primary, 0.75) 5px 5px, rgba($primary, 0.5) 10px 10px,
+            rgba($primary, 0.25) 15px 15px;
 
-    .card-header {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 20vh;
-        border-radius: .25rem;
-        overflow: hidden;
-
-        img {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-        }
-
-        .card-icon {
-            position: absolute;
-            font-size: 3rem;
-            transition: 1s;
+        .title,
+        .v-icon {
+            transition-duration: 400ms;
+            color: $primary;
         }
     }
-
-    .card-content {
-        padding: 0.5rem;
-
-        .card-title {
-            font-size: large;
-            font-weight: bold;
-        }
-        
-        .card-subtitle {
-            font-size: small;
-            margin-bottom: 0.5rem;
-        }
-    }
-}
-</style>
+}</style>
+  

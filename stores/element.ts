@@ -1,6 +1,6 @@
 export const useElementStore = defineStore("elementStore", {
   state: () => ({
-    links : [
+    links: [
       {
         title: "Home",
         link: "/",
@@ -18,6 +18,29 @@ export const useElementStore = defineStore("elementStore", {
         link: "/resume",
       },
     ] as any[],
+    projects: [
+      {
+        title: "Tempora, numquam laborum?",
+        type: "Tempora",
+        icon: "mdi-puzzle",
+        description:
+          "Adipisci facilis ullam maxime ducimus aliquid quae repudiandae ratione modi cupiditate dolores recusandae odio odit molestiae provident porro dolor quis rem, dolorem atque voluptatem nostrum, nobis, deserunt numquam asperiores. Ipsa!",
+      },
+      {
+        title: "Magni, numquam dolores!",
+        type: "Magni",
+        icon: "mdi-earth",
+        description:
+          "Eius natus, sunt ea voluptas dolor omnis recusandae. Eos veniam enim labore quasi voluptates, expedita, commodi distinctio illum hic eius ratione eaque! Numquam iusto corrupti, neque vero ducimus recusandae itaque?",
+      },
+      {
+        title: "Enim, ex odio!",
+        type: "Enim",
+        icon: "mdi-fruit-watermelon",
+        description:
+          "Similique itaque suscipit eum ducimus aperiam consectetur corporis culpa unde. Atque, similique. Quia molestias soluta qui! Ipsa pariatur temporibus magnam, facere nemo dolorem molestiae nesciunt corrupti quam accusantium, aspernatur vel!",
+      },
+    ],
     skills: [
       {
         title: "Coding",
@@ -98,6 +121,28 @@ export const useElementStore = defineStore("elementStore", {
       },
       {
         name: "mdi-twitch",
+      },
+    ] as any[],
+    educations: [
+      {
+        title: "Web Apps Development",
+        date: "2019",
+      },
+      {
+        title: "Graphic Design",
+        date: "2017",
+      },
+      {
+        title: "X Management: Strategy and Tactics",
+        date: "2020-2019",
+      },
+      {
+        title: "Web Design for Usability",
+        date: "2015",
+      },
+      {
+        title: "Illutrator",
+        date: "2023",
       },
     ] as any[],
   }),

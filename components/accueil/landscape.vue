@@ -4,7 +4,7 @@
             <v-col class="d-flex align-center justify-center">
                 <!-- <img src="/assets/img/startup.svg" data-aos="fade-right" /> -->
             </v-col>
-            <v-col class="d-flex flex-column align-end justify-center ga-6">
+            <v-col cols="auto" class="d-flex flex-column align-end justify-center ga-6">
                 <!-- <CubeThree class="cube" data-aos="zoom-in" /> -->
                 <img v-if="theme.isDark" src="/assets/img/df-light.svg" style="width: 25%;" />
                 <img v-else src="/assets/img/df-dark.svg" style="width: 25%;" />
@@ -38,7 +38,7 @@ section {
 }
 
 .title {
-    font-size: 3rem;
+    font-size: clamp(0.5rem, 5vw, 3.5rem);
     font-weight: bold;
     display: flex;
     flex-direction: column;

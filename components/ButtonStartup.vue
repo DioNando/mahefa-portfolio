@@ -27,7 +27,7 @@ const scrollToGallery = () => {
 @import "~/assets/scss/_variables.scss";
 
 .btn {
-    border: none;
+    border: 1px $primary solid;
     padding: 1rem 1.5rem;
     border-radius: 5rem;
     display: flex;

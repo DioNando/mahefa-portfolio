@@ -27,7 +27,7 @@ const scrollToGallery = () => {
 @import "~/assets/scss/_variables.scss";
 
 .title {
-    font-size: 4em;
+    font-size: clamp(2rem, 7vw, 4rem);
     font-weight: 900;
     background-size: 100%;
     -webkit-background-clip: text;
@@ -37,10 +37,10 @@ const scrollToGallery = () => {
 }
 
 .light {
-    background-image: linear-gradient(45deg, $primary, $quaternary, $primary);
+    background-image: linear-gradient(45deg, $secondary, $primary, $primary, $primary);
 }
 
 .dark {
-    background-image: linear-gradient(45deg, $light, $primary, $primary);
+    background-image: linear-gradient(45deg, $primary, $secondary, $secondary, $secondary);
 }
 </style>

@@ -40,9 +40,8 @@
       </p>
     </div>
 
-    <div class="button-top">
-      <v-btn icon="mdi-chevron-up" @click="scrollToTop" :color="theme.isDark ? 'dark' : 'secondary'"
-        variant="tonal"></v-btn>
+    <div class="button-top" v-if="posY > 700">
+      <v-btn icon="mdi-chevron-up" @click="scrollToTop" :color="theme.isDark ? 'dark' : 'secondary'"></v-btn>
     </div>
   </v-footer>
 </template>
@@ -51,10 +50,10 @@
 const theme = useThemeStore()
 const store_elements = useElementStore()
 
-const colorWaveLight = '159, 65, 24'
+const colorWaveLight = '0, 219, 222'
 const colorWaveDark = '52, 54, 64'
 
-let posY = 0
+const posY = ref(0)
 
 const scrollToTop = () => {
   window.scrollTo({
@@ -64,8 +63,20 @@ const scrollToTop = () => {
 };
 
 const handleScroll = () => {
-  posY = window.scrollY
+  posY.value = window.scrollY
 }
+
+onMounted(() => {
+  if (process.client) {
+    window.addEventListener('scroll', handleScroll);
+  }
+})
+// destroyed() {
+//   if (process.client) {
+//     window.removeEventListener('scroll', handleScroll);
+//   }
+// }
+
 </script>
 
 <style lang="scss" scoped>
@@ -83,17 +94,17 @@ const handleScroll = () => {
 .router-link {
   font-weight: bold;
   transition: 200ms;
-  color: $secondary;
-  font-size: x-large;
+  // color: $tertiary;
+  font-size: clamp(0.25rem, 3vw, 1.5rem);
 
   &:hover {
-    color: $primary;
+    color: $quaternary;
     transform: scale(1.1);
   }
 }
 
 .router-link-exact-active {
-  color: $primary;
+  color: $secondary;
 }
 
 p {

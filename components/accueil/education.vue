@@ -2,42 +2,22 @@
     <section>
         <TitleGradient :title="'Education.'" />
         <div class="cards-container">
-            <div v-for="(s, index) in services" :key="index" class="card-space">
-                <CardService :service="s" :show="true" />
+            <div cols="6" v-for="(item, index) in store_elements.educations" :key="index" class="education">
+                <div class="education-title">{{ item.title }}</div>
+                <div class="education-date text-subtitle-1">{{ item.date }}</div>
             </div>
         </div>
     </section>
 </template>
   
 <script setup lang="ts">
-
-const services = [
-    {
-        title: "Tempora, numquam laborum?",
-        type: "Tempora",
-        icon: "mdi-puzzle",
-        description:
-            "Adipisci facilis ullam maxime ducimus aliquid quae repudiandae ratione modi cupiditate dolores recusandae odio odit molestiae provident porro dolor quis rem, dolorem atque voluptatem nostrum, nobis, deserunt numquam asperiores. Ipsa!",
-    },
-    {
-        title: "Magni, numquam dolores!",
-        type: "Magni",
-        icon: "mdi-earth",
-        description:
-            "Eius natus, sunt ea voluptas dolor omnis recusandae. Eos veniam enim labore quasi voluptates, expedita, commodi distinctio illum hic eius ratione eaque! Numquam iusto corrupti, neque vero ducimus recusandae itaque?",
-    },
-    {
-        title: "Enim, ex odio!",
-        type: "Enim",
-        icon: "mdi-fruit-watermelon",
-        description:
-            "Similique itaque suscipit eum ducimus aperiam consectetur corporis culpa unde. Atque, similique. Quia molestias soluta qui! Ipsa pariatur temporibus magnam, facere nemo dolorem molestiae nesciunt corrupti quam accusantium, aspernatur vel!",
-    },
-];
+const store_elements = useElementStore()
 
 </script>
   
 <style lang="scss" scoped>
+@import "~/assets/scss/_variables.scss";
+
 section {
     display: flex;
     flex-direction: column;
@@ -46,15 +26,31 @@ section {
 }
 
 .cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: center;
-    gap: 2rem;
 
-    .card-space {
-        flex: 1;
-        min-width: 350px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.education {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 2px $primary solid;
+
+    .education-title {
+        font-size: large;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    .education-title {
+        font-size: small;
     }
 }
 </style>

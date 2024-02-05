@@ -1,10 +1,9 @@
 <template>
     <section>
-        <TitleGradient :title="'Some projects.'" />
+        <TitleGradient :title="'Aside.'" />
         <div class="cards-container">
-            <div v-for="(item, index) in store_elements.projects" :key="index" class="card-space">
-                <CardProject :service="item" :show="true" />
-            </div>
+            <CardAside v-for="(item, index) in store_elements.photos" :key="index" :data="item"
+                :emoji="store_emojis.getRandomEmoji()" />
         </div>
     </section>
 </template>
@@ -51,14 +50,7 @@ section {
 .cards-container {
     display: flex;
     flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: center;
-    gap: 2rem;
-
-    .card-space {
-        flex: 1;
-        min-width: 350px;
-    }
+    gap: 1rem;
 }
 </style>
   

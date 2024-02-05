@@ -18,6 +18,7 @@
         </div>
         <AccueilStory />
         <AccueilEducation />
+        <AccueilAside />
     </v-container>
 </template>
 

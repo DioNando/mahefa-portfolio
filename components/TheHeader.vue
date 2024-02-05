@@ -1,5 +1,4 @@
 <template>
-
   <div>
     <div class="menu" :class="[sidebarVisible ? 'menu-show' : '', theme.isDark ? 'menu-dark' : 'menu-light']">
       <div v-if="sidebarContentVisible" class="menu-links">
@@ -11,18 +10,16 @@
       <div v-if="sidebarContentVisible" class="d-flex align-end justify-space-between">
         <div class="d-flex flex-column align-start">
           <ThemeMode />
-          <p class="text-disabled"> Made with <v-icon icon="mdi-heart"></v-icon></p>
-          <p class="text-disabled">
+          <p class="text-disabled text-subtitle-1"> Made with <v-icon icon="mdi-heart"></v-icon></p>
+          <p class="text-disabled text-caption">
             By Dio_Nando
           </p>
         </div>
 
-        <div class="d-flex flex-column ga-5">
+        <div class="d-none d-lg-flex flex-column ga-5">
           <v-icon v-for="(i, index) of store_elements.icons" :key="index" :icon="i.name"
             :color="theme.isDark ? 'light' : 'primary'"></v-icon>
         </div>
-
-
       </div>
     </div>
     <div class="menu-toolbar">
@@ -32,8 +29,8 @@
       </div> -->
       <v-spacer></v-spacer>
       <div>
-        <v-btn :prepend-icon="sidebarVisible ? 'mdi-backburger' : 'mdi-menu'" size="large" elevation="4" rounded="xl" :class="theme.isDark ? 'dark' : 'light'"
-          @click="toggleSidebar">Menu</v-btn>
+        <v-btn :prepend-icon="sidebarVisible ? 'mdi-backburger' : 'mdi-menu'" size="large" elevation="4" rounded="xl"
+          :class="theme.isDark ? 'dark' : 'light'" @click="toggleSidebar">Menu</v-btn>
       </div>
     </div>
   </div>
@@ -84,19 +81,19 @@ const toggleSidebar = () => {
 @import "~/assets/scss/_variables.scss";
 
 .light {
-    background-image: linear-gradient(45deg, $tertiary, $primary,);
+  background-image: linear-gradient(45deg, $secondary, $quaternary, );
 }
 
 .dark {
-    background-image: linear-gradient(45deg, $quaternary, $secondary);
+  background-image: linear-gradient(45deg, $primary, $tertiary);
 }
 
 .router-link {
   font-weight: bold;
   transition: 200ms;
   color: $secondary;
-  font-size: xx-large;
-  
+  font-size: clamp(0.5rem, 4vw, 2.5rem);
+
   &:hover {
     color: $primary;
     transform: translateX(1rem);
@@ -136,7 +133,10 @@ const toggleSidebar = () => {
   }
 }
 
+
+
 .menu-show {
+  min-width: auto;
   width: 40%;
   position: fixed;
   padding: 4rem;
@@ -145,6 +145,17 @@ const toggleSidebar = () => {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
 }
 
 .menu-dark {
@@ -182,5 +193,12 @@ const toggleSidebar = () => {
     opacity: 1;
   }
 }
+
+@media only screen and (max-width: 720px) {
+  .menu-show {
+    padding: 2rem;
+  }
+}
+
 </style>
   
