@@ -1,29 +1,31 @@
 <template>
-  <IllustrationsWaves />
-  <v-footer class="text-center d-flex flex-column pa-0" :class="!theme.isDark ? 'bg-primary' : ''">
-    <div class="links mb-6">
-      <NuxtLink v-for="l in store_elements.navigation" :key="l.title" :to="l.link" class="router-link">
-        {{ l.title }}
-      </NuxtLink>
-    </div>
-    <h2>
-      Lorem ipsum dolor sit amet.
-    </h2>
-    <div class="text-center d-flex align-center ga-6 mt-6">
-      <v-icon v-for="(i, index) of links" :key="index" :icon="i.name" size="large"
-        :color="theme.isDark ? 'secondary' : 'light'"></v-icon>
-    </div>
-    <div class="text-center pa-4">
-      <p class="text-disabled">
-        Made with <v-icon icon="mdi-heart"></v-icon>
-      </p>
-      <p class="text-disabled">
-        {{ new Date().getFullYear() }} © Dio_Nando
-      </p>
-    </div>
-    <ButtonsScrollToTop />
+  <footer>
+    <IllustrationsWaves class="d-none d-md-block" />
+    <v-footer class="d-flex flex-column" :class="!theme.isDark ? 'bg-primary' : ''">
+      <div class="link">
+        <NuxtLink v-for="l in store_elements.navigation" :key="l.title" :to="l.link" class="router-link">
+          {{ l.title }}
+        </NuxtLink>
+      </div>
+      <div class="text-body-1">
+        Lorem ipsum dolor sit amet.
+      </div>
+      <div class="icon text-center d-flex align-center ga-6 mt-6 d-none">
+        <v-icon v-for="(i, index) of links" :key="index" :icon="i.name" size="large"
+          :color="theme.isDark ? 'secondary' : 'light'"></v-icon>
+      </div>
+      <div class="text-center text-disabled pa-4">
+        <p>
+          Made with <v-icon icon="mdi-heart"></v-icon>
+        </p>
+        <p>
+          {{ new Date().getFullYear() }} © Dio_Nando
+        </p>
+      </div>
+      <ButtonsScrollToTop class="d-none d-sm-block" />
 
-  </v-footer>
+    </v-footer>
+  </footer>
 </template>
 
 <script setup lang="ts">
@@ -36,22 +38,31 @@ const store_elements = useElementStore()
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/scss/_variables.scss";
+@import "~/assets/scss/style.scss";
 
-.links {
+.link {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  gap: 4rem;
+  justify-content: space-evenly;
+  width: 100%;
   padding: 1rem;
   text-align: center;
-  justify-content: center;
+
+  @media only screen and (min-width: 600px) {
+    justify-content: center;
+    gap: 4rem;
+  }
 }
 
 .router-link {
   font-weight: bold;
   transition: 200ms;
-  // color: $tertiary;
   font-size: clamp(0.25rem, 3vw, 1.5rem);
+
+  &-exact-active {
+    color: $secondary;
+  }
 
   &:hover {
     color: $quaternary;
@@ -59,8 +70,8 @@ const store_elements = useElementStore()
   }
 }
 
-.router-link-exact-active {
-  color: $secondary;
+.icon {
+  font-size: 1.5rem;
 }
 
 p {

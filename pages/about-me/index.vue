@@ -1,17 +1,11 @@
 <template>
     <v-container>
-        <div class="emojis">
-            <div v-for="(i, index) of store_emojis.emojis" class="ma-1">
-                <p>{{ i.character }}</p>
-            </div>
-        </div>
+        <TextsTitle :title="'I\'m David Fernando.'" />
     </v-container>
 </template>
 
 <script setup lang="ts">
 const store_emojis = useEmojiStore()
-
-await callOnce(store_emojis.fetch)
 
 import anime from 'animejs';
 import { onMounted } from 'vue';

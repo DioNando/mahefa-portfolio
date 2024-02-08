@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <nav>
     <NavbarsTool />
-  </div>
+  </nav>
 </template>
 
 <script setup lang="ts">

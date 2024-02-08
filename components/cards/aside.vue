@@ -1,23 +1,17 @@
 <template>
     <div class="card" :class="theme.isDark ? 'dark' : 'light'">
-        <div class="card__header">
+        <div class="card__header d-none d-sm-block">
             <NuxtImg :src="props.data.source" />
-            <div class="card__icon d-none">
-                <!-- <v-icon icon="mdi-code-tags" color="primary"></v-icon> -->
-                <div>{{ props.emoji.character }}</div>
-            </div>
         </div>
         <div class="card__content">
-            <!-- <div class="card-description"> -->
-            <div class="card__title">{{ props.emoji.character + ' ' + store_elements.capitalizeName(props.emoji.unicodeName)
+            <div class="card__title mb-3">{{ props.emoji.character + ' ' + store_elements.capitalizeName(props.emoji.unicodeName)
             }}</div>
-            <div class="card__subtitle">{{ store_elements.separateName(props.emoji.group.toUpperCase()) }}</div>
+            <div class="card__subtitle text-disabled">{{ store_elements.separateName(props.emoji.group.toUpperCase()) }}</div>
             <div class="card__description">
-                <v-chip size="small" label v-for="index in 5" :key="index">
+                <v-chip size="small" label v-for="index in 3" :key="index">
                     {{ 'item ' + index }}
                 </v-chip>
             </div>
-            <!-- </div> -->
         </div>
     </div>
 </template>
@@ -58,7 +52,6 @@ const props = defineProps<{
     flex: 1;
     min-width: 250px;
     border-radius: 1rem;
-    // border: 1px $primary solid;
     transition: 1s;
     border-radius: 0.25rem;
     height: auto;

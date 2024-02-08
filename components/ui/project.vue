@@ -3,8 +3,11 @@
         <TextsTitle :title="'Some projects.'" />
         <div class="cards-container">
             <div v-for="(item, index) in projects" :key="index" class="card-space">
-                <CardsProject :service="item" :show="true" />
+                <CardsProject :project="item" :show="true" />
             </div>
+        </div>
+        <div class="text-center">
+            <p>Distinctio harum illum, error deleniti commod</p>
         </div>
     </section>
 </template>
@@ -41,13 +44,10 @@ onMounted(() => {
 </script>
   
 <style lang="scss" scoped>
-@import "~/assets/scss/_variables.scss";
+@import "~/assets/scss/style.scss";
 
 section {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 2rem;
+    @extend %section-accueil;
 }
 
 .cards-container {

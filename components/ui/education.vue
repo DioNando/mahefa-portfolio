@@ -17,21 +17,21 @@ const educations = ref(dataEducations)
 </script>
   
 <style lang="scss" scoped>
-@import "~/assets/scss/_variables.scss";
+@import "~/assets/scss/style.scss";
 
 section {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 2rem;
+    @extend %section-accueil;
 }
 
 .cards-container {
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 2rem;
-    margin-bottom: 3rem;
+
+    @media only screen and (min-width: 600px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .education {
@@ -42,16 +42,7 @@ section {
 
     .education-title {
         font-size: large;
-    }
-}
-
-@media only screen and (max-width: 720px) {
-    .cards-container {
-        grid-template-columns: 1fr;
-    }
-
-    .education-title {
-        font-size: small;
+        @include text-overflow-hidden(75%);
     }
 }
 </style>

@@ -1,5 +1,7 @@
 // UILISER CONVENTION BEM
 @import "_variables.scss";
+@import "_mixins.scss";
+@import "_placeholders.scss";
 @import "_animations.scss";
 
 *::-webkit-scrollbar,
@@ -9,12 +11,13 @@ body::-webkit-scrollbar {
 }
 *::-webkit-scrollbar-track,
 body::-webkit-scrollbar-track {
-  background-color: $light;
+  background-color: $surface;
 }
 *::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb {
   background-color: darken($primary, $amount: 5);
-  border: $light solid 4px;
+  border-left: 3px solid $surface;
+  border-right: 3px solid $surface;
 }
 *::-webkit-scrollbar-thumb:hover,
 body::-webkit-scrollbar-thumb:hover {
@@ -23,6 +26,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 * {
   min-width: 0;
+  font: inherit;
 
   &::before,
   &::after {
@@ -44,7 +48,6 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
-  font-family: "Poppins", sans-serif;
 }
 
 p {
@@ -54,10 +57,4 @@ p {
 a {
   text-decoration: none;
   color: inherit;
-}
-
-@mixin center-element {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }

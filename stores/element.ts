@@ -6,11 +6,7 @@ export const useElementStore = defineStore("elementStore", {
         link: "/",
       },
       {
-        title: "Contact",
-        link: "/contact",
-      },
-      {
-        title: "About Me",
+        title: "About me",
         link: "/about-me",
       },
       {

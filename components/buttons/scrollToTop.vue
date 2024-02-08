@@ -1,5 +1,5 @@
 <template>
-  <div class="button-top" v-if="posY > 350">
+  <div class="button--top" v-if="posY > 350">
     <v-btn icon="mdi-chevron-up" @click="scrollToTop" :color="theme.isDark ? 'dark' : 'secondary'"></v-btn>
   </div>
 </template>
@@ -33,11 +33,11 @@ onMounted(() => {
 </script>
 
 <style lang="scss">
-.button-top {
+.button--top {
   position: fixed;
+  opacity: 0.5;
   bottom: 2rem;
   right: 2rem;
-  opacity: 0.5;
   transition: 500ms;
 
   &:hover {

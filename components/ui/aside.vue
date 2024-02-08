@@ -40,13 +40,10 @@ onMounted(() => {
 </script>
   
 <style lang="scss" scoped>
-@import "~/assets/scss/_variables.scss";
+@import "~/assets/scss/style.scss";
 
 section {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 2rem;
+    @extend %section-accueil;
 }
 
 .cards-container {
