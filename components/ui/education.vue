@@ -1,8 +1,8 @@
 <template>
     <section>
-        <TitleGradient :title="'Education.'" />
+        <TextsTitle :title="'Education.'" />
         <div class="cards-container">
-            <div cols="6" v-for="(item, index) in store_elements.educations" :key="index" class="education">
+            <div cols="6" v-for="(item, index) in educations" :key="index" class="education">
                 <div class="education-title">{{ item.title }}</div>
                 <div class="education-date text-subtitle-1">{{ item.date }}</div>
             </div>
@@ -11,7 +11,8 @@
 </template>
   
 <script setup lang="ts">
-const store_elements = useElementStore()
+import dataEducations from '~/data/educations.json'
+const educations = ref(dataEducations)
 
 </script>
   

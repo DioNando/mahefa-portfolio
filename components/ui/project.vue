@@ -1,20 +1,22 @@
 <template>
     <section>
-        <TitleGradient :title="'Some projects.'" />
+        <TextsTitle :title="'Some projects.'" />
         <div class="cards-container">
-            <div v-for="(item, index) in store_elements.projects" :key="index" class="card-space">
-                <CardProject :service="item" :show="true" />
+            <div v-for="(item, index) in projects" :key="index" class="card-space">
+                <CardsProject :service="item" :show="true" />
             </div>
         </div>
     </section>
 </template>
   
 <script setup lang="ts">
+import dataProjects from '~/data/projects.json'
+const projects = ref(dataProjects)
+
 import anime from 'animejs';
 import { onMounted } from 'vue';
 
 const store_emojis = useEmojiStore()
-const store_elements = useElementStore()
 
 await callOnce(store_emojis.fetch)
 

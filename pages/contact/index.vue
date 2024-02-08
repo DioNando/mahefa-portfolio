@@ -1,7 +1,7 @@
 <template>
     <v-container>
         <v-row justify="center">
-            <CircleButton />
+            <ButtonsCircle />
         </v-row>
     </v-container>
 </template>

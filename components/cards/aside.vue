@@ -1,25 +1,32 @@
 <template>
-    <div class="card">
-        <div class="card-header">
+    <div class="card" :class="theme.isDark ? 'dark' : 'light'">
+        <div class="card__header">
             <NuxtImg :src="props.data.source" />
-            <div class="card-icon d-none">
+            <div class="card__icon d-none">
                 <!-- <v-icon icon="mdi-code-tags" color="primary"></v-icon> -->
                 <div>{{ props.emoji.character }}</div>
             </div>
         </div>
-        <div class="card-content">
+        <div class="card__content">
             <!-- <div class="card-description"> -->
-            <div class="card-title">{{ props.emoji.character + ' ' + store_elements.capitalizeName(props.emoji.unicodeName) }}</div>
-            <div class="card-subtitle">{{ store_elements.separateName(props.emoji.group.toUpperCase()) }}</div>
-            <div class="card-description">Lorem ipsum dolor sit a!</div>
+            <div class="card__title">{{ props.emoji.character + ' ' + store_elements.capitalizeName(props.emoji.unicodeName)
+            }}</div>
+            <div class="card__subtitle">{{ store_elements.separateName(props.emoji.group.toUpperCase()) }}</div>
+            <div class="card__description">
+                <v-chip size="small" label v-for="index in 5" :key="index">
+                    {{ 'item ' + index }}
+                </v-chip>
+            </div>
             <!-- </div> -->
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
+const theme = useThemeStore()
 import { type EmojiInterface } from "~/interfaces/emoji.interface";
 const store_elements = useElementStore()
+
 
 const props = defineProps<{
     data: any
@@ -30,24 +37,38 @@ const props = defineProps<{
 <style lang="scss" scoped>
 @import "~/assets/scss/_variables.scss";
 
+.light {
+    // background-image: linear-gradient(45deg, $primary, $quaternary, );
+    background-color: darken($color: $light, $amount: 5%);
+
+    &:hover {
+        background-color: darken($color: $light, $amount: 15%);
+    }
+}
+
+.dark {
+    background-image: linear-gradient(-45deg, $dark, $surface);
+
+    &:hover {
+        background-color: lighten($color: $surface, $amount: 10%);
+    }
+}
+
 .card {
     flex: 1;
     min-width: 250px;
     border-radius: 1rem;
-    background-color: $surface;
     // border: 1px $primary solid;
     transition: 1s;
     border-radius: 0.25rem;
     height: auto;
     padding: 0.75rem;
-    color: $light;
 
     &:hover {
         flex: 2;
-        background-color: lighten($color: $surface, $amount: 10%);
     }
 
-    .card-header {
+    .card__header {
         position: relative;
         display: flex;
         align-items: center;
@@ -62,29 +83,33 @@ const props = defineProps<{
             height: 100%;
         }
 
-        .card-icon {
+        .card__icon {
             position: absolute;
             font-size: 3rem;
             transition: 1s;
         }
     }
 
-    .card-content {
+    .card__content {
         padding: 0.5rem;
 
-        .card-title {
+        .card__title {
             font-size: large;
             font-weight: bold;
             color: $secondary;
         }
-        
-        .card-subtitle {
+
+        .card__subtitle {
             font-size: small;
             margin-bottom: 0.5rem;
         }
 
-        .card-description {
-            font-size: smaller;
+        .card__description {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
         }
     }
 }

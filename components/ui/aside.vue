@@ -1,19 +1,21 @@
 <template>
     <section>
-        <TitleGradient :title="'Aside.'" />
+        <TextsTitle :title="'Aside.'" />
         <div class="cards-container">
-            <CardAside v-for="(item, index) in store_elements.photos" :key="index" :data="item"
-                :emoji="store_emojis.getRandomEmoji()" />
+            <CardsAside v-for="(item, index) in photos" :key="index" :data="item" :emoji="store_emojis.getRandomEmoji()" />
         </div>
     </section>
 </template>
   
 <script setup lang="ts">
+import dataPhotos from '~/data/photos.json'
 import anime from 'animejs';
 import { onMounted } from 'vue';
 
 const store_emojis = useEmojiStore()
 const store_elements = useElementStore()
+
+const photos = store_elements.getRandomElements(dataPhotos, 6)
 
 await callOnce(store_emojis.fetch)
 

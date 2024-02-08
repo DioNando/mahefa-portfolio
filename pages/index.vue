@@ -1,13 +1,11 @@
 <template>
     <v-container>
-        <AccueilLandscape />
-        <AccueilProject />
+        <UiLandscape />
+        <UiProject />
         <div class="text-center ma-6">
-            <!-- <img v-if="theme.isDark" src="/assets/img/flame-white.svg" style="width: 30%;" data-aos="fade-out" />
-                <img v-else src="/assets/img/flame.svg" style="width: 30%;" data-aos="fade-out" /> -->
             <h1>Distinctio harum illum, error deleniti commod</h1>
         </div>
-        <AccueilSkill />
+        <UiSkill />
         <div class="text-center ma-12">
             <h1>Lorem ipsum dolor sit amet.</h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis fugit doloremque quia,
@@ -16,9 +14,9 @@
                 facilis
                 porro?</p>
         </div>
-        <AccueilStory />
-        <AccueilEducation />
-        <AccueilAside />
+        <UiStory />
+        <UiEducation />
+        <UiAside />
     </v-container>
 </template>
 

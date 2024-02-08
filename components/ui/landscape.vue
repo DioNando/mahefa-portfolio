@@ -4,7 +4,7 @@
             <v-col class="d-flex align-center justify-center">
                 <!-- <img src="/assets/img/startup.svg" data-aos="fade-right" /> -->
                 <div style="width: 100%;">
-                    <IllustrationLandscape />
+                    <IllustrationsLandscape />
                 </div>
             </v-col>
             <v-col cols="auto" class="d-flex flex-column align-end justify-center ga-6">
@@ -17,7 +17,7 @@
                     <p>UI/UX Designer</p>
                     <p>Graphist</p>
                 </div>
-                <ButtonStartup />
+                <ButtonsStartup />
             </v-col>
         </v-row>
     </section>

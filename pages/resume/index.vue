@@ -6,7 +6,7 @@
             voluptatibus perspiciatis exercitationem, qui, eaque sed consequuntur minima ad nesciunt modi quasi unde
             incidunt culpa magni.</p>
         <div class="d-flex align-center justify-center">
-            <CubeThree />
+            <IllustrationsCubeThree />
         </div>
     </v-container>
 </template>
