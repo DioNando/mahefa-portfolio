@@ -1,20 +1,25 @@
 <template>
     <section>
-        <TitleGradient :title="'Some projects.'" />
+        <TextsTitle :title="'Some projects.'" />
         <div class="cards-container">
-            <div v-for="(item, index) in store_elements.projects" :key="index" class="card-space">
-                <CardProject :service="item" :show="true" />
+            <div v-for="(item, index) in projects" :key="index" class="card-space">
+                <CardsProject :project="item" :show="true" />
             </div>
+        </div>
+        <div class="text-center">
+            <p>Distinctio harum illum, error deleniti commod</p>
         </div>
     </section>
 </template>
   
 <script setup lang="ts">
+import dataProjects from '~/data/projects.json'
+const projects = ref(dataProjects)
+
 import anime from 'animejs';
 import { onMounted } from 'vue';
 
 const store_emojis = useEmojiStore()
-const store_elements = useElementStore()
 
 await callOnce(store_emojis.fetch)
 
@@ -39,13 +44,10 @@ onMounted(() => {
 </script>
   
 <style lang="scss" scoped>
-@import "~/assets/scss/_variables.scss";
+@import "~/assets/scss/style.scss";
 
 section {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 2rem;
+    @extend %section-accueil;
 }
 
 .cards-container {

@@ -1,12 +1,12 @@
 <template>
-  <div class="circle-content">
-    <div class="circle-sub">
-      <div class="circle-element" :class="!showButton ? 'circle-rotate' : ''">
-        <v-icon v-for="(i, index) of icons" :key="index" :icon="i.name" :color="theme.isDark ? 'light' : 'secondary'" class="circle-button"
-          :class="showButton ? 'button-show' : 'button-hide'"></v-icon>
+  <div class="circle__content">
+    <div class="circle__sub">
+      <div class="circle__element" :class="!showButton ? 'element--rotate' : ''">
+        <v-icon v-for="(i, index) of icons" :key="index" :icon="i.name" :color="theme.isDark ? 'light' : 'secondary'"
+          class="element__button" :class="showButton ? 'element__button--show' : 'element__button--hide'"></v-icon>
       </div>
     </div>
-    <v-btn icon="mdi-access-point" color="primary" @click="toggleButton" class="toggle-button"></v-btn>
+    <v-btn icon="mdi-access-point" color="primary" @click="toggleButton" class="toggle__button"></v-btn>
   </div>
 </template>
 
@@ -38,7 +38,7 @@ const toggleButton = () => {
 
 
 <style scoped>
-.circle-content {
+.circle__content {
   position: relative;
   display: flex;
   align-items: center;
@@ -48,34 +48,32 @@ const toggleButton = () => {
   border-radius: 50%;
 }
 
-.circle-sub {
+.circle__sub {
   position: absolute;
-}
 
-.circle-element {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 500ms;
-
-  .circle-button {
-    font-size: 2rem;
-    position: absolute;
+  .circle__element {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: 500ms;
-  }
 
+    .element__button {
+      font-size: 2rem;
+      position: absolute;
+      transition: 500ms;
+    }
+
+  }
 }
 
-.circle-rotate {
+.element--rotate {
   transform: rotate(180deg);
 }
 
 
-.button-show {
+.element__button--show {
   cursor: pointer;
-
-
 
   &:nth-child(1) {
     transform: translateY(-5rem);
@@ -94,11 +92,11 @@ const toggleButton = () => {
   }
 }
 
-.button-hide {
+.element__button--hide {
   transform: translate(0);
 }
 
-.toggle-button {
+.toggle__button {
   padding: 2rem;
   font-size: 1.5rem;
   display: flex;

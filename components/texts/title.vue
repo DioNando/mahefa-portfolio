@@ -1,10 +1,6 @@
 <template>
     <div>
-        <h1 class="title" :class="theme.isDark ? 'dark' : 'light'">{{ props.title }}</h1>
-        <!-- <div>
-            <v-btn icon="mdi-chevron-down" :color="theme.isDark ? 'info' : 'success'" size="x-large" class="mb-4"
-                @click="scrollToGallery"></v-btn>
-        </div> -->
+        <p class="title" :class="theme.isDark ? 'dark' : 'light'">{{ props.title }}</p>
     </div>
 </template>
 
@@ -29,6 +25,7 @@ const scrollToGallery = () => {
 .title {
     font-size: clamp(2rem, 7vw, 4rem);
     font-weight: 900;
+    margin-top: 1rem;
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;

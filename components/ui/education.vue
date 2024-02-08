@@ -1,8 +1,8 @@
 <template>
     <section>
-        <TitleGradient :title="'Education.'" />
+        <TextsTitle :title="'Education.'" />
         <div class="cards-container">
-            <div cols="6" v-for="(item, index) in store_elements.educations" :key="index" class="education">
+            <div cols="6" v-for="(item, index) in educations" :key="index" class="education">
                 <div class="education-title">{{ item.title }}</div>
                 <div class="education-date text-subtitle-1">{{ item.date }}</div>
             </div>
@@ -11,26 +11,27 @@
 </template>
   
 <script setup lang="ts">
-const store_elements = useElementStore()
+import dataEducations from '~/data/educations.json'
+const educations = ref(dataEducations)
 
 </script>
   
 <style lang="scss" scoped>
-@import "~/assets/scss/_variables.scss";
+@import "~/assets/scss/style.scss";
 
 section {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 2rem;
+    @extend %section-accueil;
 }
 
 .cards-container {
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 2rem;
-    margin-bottom: 3rem;
+
+    @media only screen and (min-width: 600px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .education {
@@ -41,16 +42,7 @@ section {
 
     .education-title {
         font-size: large;
-    }
-}
-
-@media only screen and (max-width: 720px) {
-    .cards-container {
-        grid-template-columns: 1fr;
-    }
-
-    .education-title {
-        font-size: small;
+        @include text-overflow-hidden(75%);
     }
 }
 </style>

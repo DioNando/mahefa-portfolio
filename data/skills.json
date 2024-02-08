@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Coding",
+    "details": [
+      { "name": "Javascript" },
+      { "name": "PHP" },
+      { "name": "Python" },
+      { "name": "JAVA" }
+    ]
+  },
+  {
+    "title": "UX Research",
+    "details": [{ "name": "Prototyping" }, { "name": "Planning" }]
+  },
+  {
+    "title": "Design & Product",
+    "details": [
+      { "name": "UI & UX" },
+      { "name": "Figma" },
+      { "name": "Photoshop" },
+      { "name": "Illustrator" }
+    ]
+  },
+  {
+    "title": "Soft Skills",
+    "details": [
+      { "name": "Adaptability" },
+      { "name": "Curiosity" },
+      { "name": "Teamwork" }
+    ]
+  }
+]
