@@ -24,10 +24,10 @@ section {
 }
 
 .cards-container {
-
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
+    margin-bottom: 1rem;
 
     @media only screen and (min-width: 600px) {
         grid-template-columns: repeat(2, 1fr);

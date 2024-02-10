@@ -46,6 +46,7 @@ const submit = () => {
         rgba($primary, 0.25) 15px 15px;
 
     @media only screen and (min-width: 600px) {
+        min-width: 400px;
         max-width: 400px;
         width: 400px;
     }

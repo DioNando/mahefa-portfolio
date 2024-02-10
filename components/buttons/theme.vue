@@ -22,7 +22,6 @@ const isDark = ref(theme.isDark);
 const toggleTheme = () => {
   isDark.value = !isDark.value
   theme.setDark(isDark.value)
-  console.log(isDark.value)
   if (isDark.value) {
     customTheme.global.name.value = "myCustomDarkTheme";
   } else {

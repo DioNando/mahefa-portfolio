@@ -1,0 +1,40 @@
+[
+  {
+    "title": "Tempora, numquam laborum?",
+    "type": "Tempora",
+    "icon": "mdi-draw",
+    "description": [{ "title": "Prototyping" }, { "title": "Planning" }]
+  },
+  {
+    "title": "Emnis recusandae. Eos veniam eni",
+    "type": "Gic eius",
+    "icon": "mdi-code-tags",
+    "description": [
+      { "title": "Javascript" },
+      { "title": "PHP" },
+      { "title": "Python" },
+      { "title": "JAVA" }
+    ]
+  },
+  {
+    "title": "Magni, numquam dolores!",
+    "type": "Magni",
+    "icon": "mdi-earth",
+    "description": [
+      { "title": "UI & UX" },
+      { "title": "Figma" },
+      { "title": "Photoshop" },
+      { "title": "Illustrator" }
+    ]
+  },
+  {
+    "title": "Enim, ex odio!",
+    "type": "Enim",
+    "icon": "mdi-fruit-watermelon",
+    "description": [
+      { "title": "Adaptability" },
+      { "title": "Curiosity" },
+      { "title": "Teamwork" }
+    ]
+  }
+]

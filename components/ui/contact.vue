@@ -6,7 +6,7 @@
                 <FormsContact />
             </div>
             <div class="d-flex justify-center">
-                <ButtonsCircle />
+                <img src="/assets/img/example-animate.svg" style="width: 100%;" />
             </div>
         </article>
     </section>
@@ -22,6 +22,7 @@ const theme = useThemeStore()
 
 section {
     @extend %section-accueil;
+    margin-bottom: 2rem;
 }
 
 article {
@@ -34,14 +35,19 @@ article {
         flex: auto;
         padding: 0 2rem;
 
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 1000px) {
             width: 100%;
+
+            img {
+                display: none;
+            }
         }
     }
 
     @media only screen and (min-width: 600px) {
         flex-direction: row;
         flex-wrap: wrap;
+
     }
 }
 </style>
