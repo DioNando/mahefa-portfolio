@@ -1,14 +1,12 @@
 <template>
     <section>
-        <TextsTitle :title="'My story.'" />
+        <TextsTitle :title="'A project ? Contact me.'" />
         <article>
             <div class="d-flex justify-center">
-                <!-- <img v-if="theme.isDark" src="/assets/img/df-light.svg" style="width: 40%;" />
-                <img v-else src="/assets/img/df-dark.svg" style="width: 40%;" /> -->
-                <GsapLogo />
+                <FormsContact />
             </div>
             <div class="d-flex justify-center">
-                <ButtonsCircle />
+                <img src="/assets/img/example-animate.svg" style="width: 100%;" />
             </div>
         </article>
     </section>
@@ -24,6 +22,7 @@ const theme = useThemeStore()
 
 section {
     @extend %section-accueil;
+    margin-bottom: 2rem;
 }
 
 article {
@@ -32,8 +31,23 @@ article {
     align-items: center;
     justify-content: space-evenly;
 
+    div {
+        flex: auto;
+        padding: 0 2rem;
+
+        @media only screen and (max-width: 1000px) {
+            width: 100%;
+
+            img {
+                display: none;
+            }
+        }
+    }
+
     @media only screen and (min-width: 600px) {
         flex-direction: row;
+        flex-wrap: wrap;
+
     }
 }
 </style>

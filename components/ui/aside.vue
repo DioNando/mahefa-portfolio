@@ -10,13 +10,12 @@
 <script setup lang="ts">
 import dataPhotos from '~/data/photos.json'
 import anime from 'animejs';
-import { onMounted } from 'vue';
 
-const store_emojis = useEmojiStore()
 const store_elements = useElementStore()
 
 const photos = store_elements.getRandomElements(dataPhotos, 6)
 
+const store_emojis = useEmojiStore()
 await callOnce(store_emojis.fetch)
 
 const { $anime } = useNuxtApp()

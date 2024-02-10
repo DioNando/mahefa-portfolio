@@ -2,14 +2,12 @@
     <section>
         <v-row>
             <v-col class="d-none d-sm-flex align-center justify-center">
-                <div style="width: 100%;">
-                    <IllustrationsLandscape />
-                </div>
+                <img src="/assets/img/developer-activity-animate.svg" style="width: 100%;" />
             </v-col>
             <v-col cols="auto" class="d-flex flex-column align-sm-end justify-center ga-6">
-                <img v-if="theme.isDark" src="/assets/img/df-light.svg" style="width: 25%;" class="d-none d-sm-block"/>
-                <img v-else src="/assets/img/df-dark.svg" style="width: 25%;" class="d-none d-sm-block"/>
-                <p class="text-h6">Hey, I'm David Fernando {{ emoji.character }}</p>
+                <img v-if="theme.isDark" src="/assets/img/df-light.svg" style="width: 25%;" class="d-none d-sm-block" />
+                <img v-else src="/assets/img/df-dark.svg" style="width: 25%;" class="d-none d-sm-block" />
+                <p id="name" class="text-h6"></p>
                 <div class="title">
                     <p>Fullstack developper</p>
                     <p>UI/UX Designer</p>
@@ -24,10 +22,23 @@
 <script setup lang="ts">
 const theme = useThemeStore()
 
-const store_emojis = useEmojiStore()
-await callOnce(store_emojis.fetch)
+// const store_emojis = useEmojiStore()
+// await callOnce(store_emojis.fetch)
+// const emoji = store_emojis.getRandomEmoji()
 
-const emoji = store_emojis.getRandomEmoji()
+import { gsap } from "gsap";
+
+import TextPlugin from 'gsap-trial/TextPlugin';
+
+gsap.registerPlugin(TextPlugin);
+
+onMounted(() => {
+    gsap.to("#name", { duration: 3, text: "Hey, I'm David Fernando", rightToLeft: true })
+});
+
+onUnmounted(() => {
+    gsap.killTweensOf("#name")
+});
 
 </script>
 

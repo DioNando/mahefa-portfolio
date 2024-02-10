@@ -36,6 +36,12 @@ onMounted(() => {
         window.addEventListener('scroll', handleScroll);
     }
 })
+
+onUnmounted(() => {
+    if (process.client) {
+        window.removeEventListener('scroll', handleScroll);
+    }
+});
 </script>
 
 <style lang="scss" scoped>

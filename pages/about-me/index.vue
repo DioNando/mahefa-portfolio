@@ -1,49 +1,39 @@
 <template>
     <v-container>
         <TextsTitle :title="'I\'m David Fernando.'" />
+        <div class="about">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis id omnis, dolorum deserunt ipsum cum eos
+            natus aperiam. Expedita tempore placeat dolorum magnam cumque non fuga, nulla delectus assumenda architecto?
+        </div>
+        <div>
+            <NuxtLink to="/resume">
+                <v-btn rounded variant="text" color="primary" append-icon="mdi-chevron-right" class="text-none">
+                    Go to resume
+                </v-btn>
+            </NuxtLink>
+        </div>
+        <UiAside />
     </v-container>
 </template>
 
 <script setup lang="ts">
-const store_emojis = useEmojiStore()
-
-import anime from 'animejs';
-import { onMounted } from 'vue';
-
-const { $anime } = useNuxtApp()
-
 definePageMeta({
     layout: 'default'
-})
-
-onMounted(() => {
-    $anime({
-        targets: '.emojis div',
-        translateX: anime.stagger(10, { grid: [14, 5], from: 'center', axis: 'x' }),
-        translateY: anime.stagger(10, { grid: [14, 5], from: 'center', axis: 'y' }),
-        rotateZ: anime.stagger([0, 90], { grid: [14, 5], from: 'center', axis: 'x' }),
-        delay: anime.stagger(200, { grid: [14, 5], from: 'center' }),
-        easing: 'easeInOutQuad'
-    })
 })
 
 </script>
 
 <style lang="scss" scoped>
-.emojis {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+@import "~/assets/scss/style.scss";
 
-    div {
-        flex: auto;
+.v-container {
+    @extend %section-accueil;
+}
 
-        p {
-            font-size: larger;
-        }
-    }
-
+.about {
+    padding-left: 1rem;
+    border-left: 5px solid $primary;
+    font-size: large;
+    width: 60%;
 }
 </style>

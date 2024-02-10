@@ -1,7 +1,7 @@
 <template>
     <v-card class="card pa-4 bg-background d-flex flex-column" variant="outlined">
         <template v-slot:title>
-            <p class="text-h5 font-weight-bold title">{{ project.title }}</p>
+            <p class="text-h5 font-weight-bold card--title">{{ project.title }}</p>
         </template>
 
         <template v-slot:subtitle> {{ project.type }} </template>
@@ -42,7 +42,7 @@ const { project, show } = defineProps(["project", "show"]);
         box-shadow: rgba($primary, 0.75) 5px 5px, rgba($primary, 0.5) 10px 10px,
             rgba($primary, 0.25) 15px 15px;
 
-        .title,
+        .card--title,
         .v-icon {
             transition-duration: 400ms;
             color: $primary;

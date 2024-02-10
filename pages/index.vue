@@ -5,7 +5,7 @@
         <UiSkill />
         <UiStory />
         <UiEducation />
-        <UiAside />
+        <UiContact />
     </v-container>
 </template>
 
