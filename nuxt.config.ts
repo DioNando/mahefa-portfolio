@@ -18,6 +18,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxtjs/google-fonts",
     "nuxt-aos",
+    "nuxt-particles",
   ],
   runtimeConfig: {
     public: {

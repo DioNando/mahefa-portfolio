@@ -13,8 +13,7 @@
 </template>
   
 <script setup lang="ts">
-import dataProjects from '~/data/projects.json'
-const projects = ref(dataProjects)
+import projects from '~/data/projects.json'
 
 import anime from 'animejs';
 import { onMounted } from 'vue';

@@ -11,8 +11,7 @@
 </template>
   
 <script setup lang="ts">
-import dataEducations from '~/data/educations.json'
-const educations = ref(dataEducations)
+import educations from '~/data/educations.json'
 
 </script>
   

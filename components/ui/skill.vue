@@ -11,8 +11,8 @@
                 </div>
             </div>
         </article>
-        <div class="text-center" data-aos="fade-in" data-aos-duration="2000">
-            <p class="font-weight-bold">Lorem ipsum dolor sit amet.</p>
+        <div class="text-center text-disabled">
+            <p class="text-h4 font-weight-bold">Lorem ipsum dolor sit amet.</p>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis fugit doloremque quia,
                 incidunt nisi architecto nesciunt vel! Nam nemo, distinctio harum illum, error deleniti commodi
                 sunt animi tempora
@@ -23,8 +23,7 @@
 </template>
   
 <script setup lang="ts">
-import dataSkills from '~/data/skills.json'
-const skills = ref(dataSkills)
+import skills from '~/data/skills.json'
 </script>
   
 <style lang="scss" scoped>

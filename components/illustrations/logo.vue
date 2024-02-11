@@ -1,5 +1,5 @@
 <template>
-    <div id="df-svg" data-aos="fade-in" data-aos-duration="1000" data-aos-offset="200">
+    <div id="df-svg" data-aos="fade-in" data-aos-duration="1000">
 
         <svg id="df_2" data-name="df 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 250"
             :class="theme.isDark ? 'dark' : 'light'">

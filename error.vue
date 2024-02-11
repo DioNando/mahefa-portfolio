@@ -1,5 +1,5 @@
 <template>
-    <v-app>
+    <v-app id="app">
         <section>
             <template v-if="error?.statusCode === 404">
                 <div class="error__content">
@@ -31,10 +31,6 @@
 </template>
 
 <script setup lang="ts">
-definePageMeta({
-    layout: 'default'
-})
-
 const error = useError();
 
 const handleError = () => {
@@ -42,31 +38,19 @@ const handleError = () => {
         redirect: '/',
     });
 };
+
+import type { Container } from 'tsparticles-engine'
+import particles from '~/data/particlesjs-config.json'
+
+const onLoad = (container: Container) => {
+    // Do something with the container
+    container.pause()
+    setTimeout(() => container.play(), 2000)
+}
 </script>
 
 <style lang="scss" scoped>
 @import "~/assets/scss/style.scss";
-
-.page-enter-active,
-.page-leave-active {
-    transition: all 0.2s;
-}
-
-.page-enter-from,
-.page-leave-to {
-    opacity: 0;
-    filter: blur(10px);
-}
-
-.layout-enter-active,
-.layout-leave-active {
-    transition: all 0.4s;
-}
-
-.layout-enter-from,
-.layout-leave-to {
-    filter: blur(10px);
-}
 
 section {
     width: 100%;
@@ -101,5 +85,6 @@ section {
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 10;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="circle__content">
     <div class="circle__sub">
-      <div class="circle__element" :class="!showButton ? 'element--rotate' : ''">
+      <div class="circle__element" :class="!showButton && 'element--rotate'">
         <v-icon v-for="(i, index) of icons" :key="index" :icon="i.name" :color="theme.isDark ? 'light' : 'secondary'"
           class="element__button" :class="showButton ? 'element__button--show' : 'element__button--hide'"></v-icon>
       </div>

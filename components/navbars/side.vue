@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="menu" :class="[sidebarVisible ? 'menu-show' : '', theme.isDark ? 'menu-dark' : 'menu-light']">
+        <div class="menu" :class="[sidebarVisible && 'menu-show', theme.isDark ? 'menu-dark' : 'menu-light']">
             <div v-if="sidebarContentVisible" class="menu-links">
                 <NuxtLink v-for="l in store_elements.navigation" :key="l.title" :to="l.link"
                     class="router-link animation-link-in">
@@ -39,8 +39,7 @@
 
 <script setup lang="ts">
 
-import dataLinks from '~/data/links.json'
-const links = ref(dataLinks)
+import links from '~/data/links.json'
 
 import anime from 'animejs'
 

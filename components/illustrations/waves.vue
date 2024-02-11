@@ -5,25 +5,19 @@
       <defs>
         <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
       </defs>
-      <g class="parallax" v-if="theme.isDark">
-        <use xlink:href="#gentle-wave" x="48" y="0" :fill="'rgba(' + colorWaveDark + ',0.25)'" />
-        <use xlink:href="#gentle-wave" x="48" y="0" :fill="'rgba(' + colorWaveDark + ',0.5)'" />
-        <use xlink:href="#gentle-wave" x="48" y="3" :fill="'rgba(' + colorWaveDark + ',1)'" />
-      </g>
-      <g class="parallax" v-if="!theme.isDark">
-        <use xlink:href="#gentle-wave" x="48" y="0" :fill="'rgba(' + colorWaveLight + ',0.25)'" />
-        <use xlink:href="#gentle-wave" x="48" y="0" :fill="'rgba(' + colorWaveLight + ',0.5)'" />
-        <use xlink:href="#gentle-wave" x="48" y="3" :fill="'rgba(' + colorWaveLight + ',1)'" />
+      <g class="parallax">
+        <use xlink:href="#gentle-wave" x="48" y="1" :fill="theme.isDark ? color.surface : color.primary" fill-opacity="0.25" />
+        <use xlink:href="#gentle-wave" x="48" y="4" :fill="theme.isDark ? color.surface : color.primary" fill-opacity="0.5" />
+        <use xlink:href="#gentle-wave" x="48" y="7" :fill="theme.isDark ? color.surface : color.primary" fill-opacity="1" />
       </g>
     </svg>
   </div>
 </template>
 
 <script setup lang="ts">
-const theme = useThemeStore()
+import color from '~/data/color.json'
 
-const colorWaveLight = '56, 163, 165'
-const colorWaveDark = '52, 54, 64'
+const theme = useThemeStore()
 
 </script>
 
@@ -53,13 +47,13 @@ const colorWaveDark = '52, 54, 64'
 }
 
 .parallax>use:nth-child(2) {
-  animation-delay: -4s;
-  animation-duration: 13s;
+  animation-delay: -7s;
+  animation-duration: 15s;
 }
 
 .parallax>use:nth-child(3) {
-  animation-delay: -5s;
-  animation-duration: 15s;
+  animation-delay: -10s;
+  animation-duration: 20s;
 }
 
 @keyframes move-forever {

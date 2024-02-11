@@ -2,18 +2,18 @@
     <section>
         <TextsTitle :title="'Aside.'" />
         <div class="cards">
-            <CardsAside v-for="(item, index) in photos" :key="index" :data="item" :emoji="store_emojis.getRandomEmoji()"
+            <CardsAside v-for="(item, index) in selectedPhotos" :key="index" :data="item" :emoji="store_emojis.getRandomEmoji()"
                 class="card__element" />
         </div>
     </section>
 </template>
   
 <script setup lang="ts">
-import dataPhotos from '~/data/photos.json'
+import photos from '~/data/photos.json'
 
 const store_elements = useElementStore()
 
-const photos = store_elements.getRandomElements(dataPhotos, 4)
+const selectedPhotos = store_elements.getRandomElements(photos, 7)
 
 const store_emojis = useEmojiStore()
 await callOnce(store_emojis.fetch)
@@ -26,7 +26,7 @@ onMounted(() => {
         targets: '.card__element',
         opacity: [0, 1],
         translateY: [250, 0],
-        delay: anime.stagger(300, {easing: 'easeOutQuad'})
+        delay: anime.stagger(300, {easing: 'easeOutQuad', from: 'first'})
     })
 })
 

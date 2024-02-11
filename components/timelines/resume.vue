@@ -15,7 +15,6 @@
 </template>
 
 <script setup lang="ts">
-import dataResumes from '~/data/resumes.json'
+import resumes from '~/data/resumes.json'
 
-const resumes = ref(dataResumes)
 </script>

@@ -6,17 +6,24 @@
 
 <script setup lang="ts">
 const props = defineProps<{
-  title: string
+    title: string
 }>()
 
 const theme = useThemeStore()
 
-const scrollToGallery = () => {
-    window.scrollTo({
-        top: 650,
-        behavior: 'smooth'
-    });
-};
+import anime from 'animejs';
+
+const { $anime } = useNuxtApp()
+
+onMounted(() => {
+    $anime({
+        targets: '.title',
+        opacity: [0, 1],
+        translateY: [-100, 0],
+        delay: anime.stagger(300, { easing: 'easeInOutBounce' })
+
+    })
+})
 </script>
 
 <style lang="scss" scoped>

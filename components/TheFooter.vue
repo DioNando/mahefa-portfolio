@@ -1,7 +1,11 @@
 <template>
   <footer>
-    <IllustrationsWaves class="d-none d-md-block" />
-    <v-footer class="d-flex flex-column" :class="!theme.isDark ? 'bg-primary' : ''">
+    <!-- <div class="footer__particles"> -->
+    <!-- </div> -->
+    <!-- <IllustrationsBars id="footer__bars" class="d-none d-md-block" /> -->
+    <IllustrationsWaves id="footer__waves" class="d-none d-md-block" />
+    <NuxtParticles id="footer__particles" :options="particles" @load="onLoad"></NuxtParticles>
+    <v-footer class="footer__elements d-flex flex-column" :class="!theme.isDark && 'bg-primary'">
       <div class="link">
         <NuxtLink v-for="l in store_elements.navigation" :key="l.title" :to="l.link" class="router-link">
           {{ l.title }}
@@ -29,16 +33,55 @@
 </template>
 
 <script setup lang="ts">
-import dataLinks from '~/data/links.json'
-const links = ref(dataLinks)
+import links from '~/data/links.json'
 
 const theme = useThemeStore()
 const store_elements = useElementStore()
+
+import anime from 'animejs';
+const { $anime } = useNuxtApp()
+
+onMounted(() => {
+  $anime({
+    targets: '#footer__particles',
+    opacity: [0, 1],
+    delay: 300,
+    easing: 'easeInOutQuad'
+  })
+})
+
+import type { Container } from 'tsparticles-engine'
+import particles from '~/data/footer-particlesjs-config.json'
+
+const onLoad = (container: Container) => {
+  container.play()
+}
 
 </script>
 
 <style lang="scss" scoped>
 @import "~/assets/scss/style.scss";
+
+footer {
+  position: relative;
+  overflow: hidden;
+
+  #footer__bars,
+  #footer__waves {
+    z-index: 1;
+  }
+
+  #footer__particles {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .footer__elements>div {
+    z-index: 3;
+  }
+}
 
 .link {
   display: flex;

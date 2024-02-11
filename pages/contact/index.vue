@@ -1,15 +1,45 @@
 <template>
-    <v-container>
-        <v-row justify="center">
-            <ButtonsCircle />
-        </v-row>
-    </v-container>
+    <div>
+        <IllustrationsPath />
+        <NuxtParticles id="tsparticles" :options="options" @load="onLoad"></NuxtParticles>
+    </div>
 </template>
 
 <script setup lang="ts">
-definePageMeta({
-    layout: 'default'
-})
+import type { Container } from 'tsparticles-engine'
+
+const options = {
+    fullScreen: {
+        enable: true,
+        zIndex: 1
+    },
+    background: {
+        color: {
+            value: '#fff'
+        }
+    },
+    particles: {
+        color: {
+            value: "#000"
+        },
+        links: {
+            color: "#000",
+            enable: true
+        },
+        move: {
+            enable: true
+        },
+        number: {
+            value: 100
+        }
+    }
+}
+
+const onLoad = (container: Container) => {
+    // Do something with the container
+    container.pause()
+    setTimeout(() => container.play(), 2000)
+}
 </script>
 
 

@@ -17,9 +17,7 @@
 </template>
 
 <script setup lang="ts">
-import dataLinks from '~/data/links.json'
-
-const links = ref(dataLinks)
+import links from '~/data/links.json'
 
 const theme = useThemeStore()
 const store_elements = useElementStore()
