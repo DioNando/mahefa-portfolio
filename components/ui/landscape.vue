@@ -2,12 +2,12 @@
     <section>
         <v-row>
             <v-col class="d-none d-sm-flex align-center justify-center">
-                <img src="/assets/img/developer-activity-animate.svg" style="width: 100%;" />
+                <img id="illustration-landscape" src="/assets/img/developer-activity-animate.svg" style="width: 100%;" />
             </v-col>
             <v-col cols="auto" class="d-flex flex-column align-sm-end justify-center ga-6">
                 <img v-if="theme.isDark" src="/assets/img/df-light.svg" style="width: 25%;" class="d-none d-sm-block" />
                 <img v-else src="/assets/img/df-dark.svg" style="width: 25%;" class="d-none d-sm-block" />
-                <p id="name" class="text-h6"></p>
+                <p id="name" class="text-h6">Hey, I'm David Fernando</p>
                 <div class="title">
                     <p>Fullstack developper</p>
                     <p>UI/UX Designer</p>
@@ -22,23 +22,24 @@
 <script setup lang="ts">
 const theme = useThemeStore()
 
-// const store_emojis = useEmojiStore()
-// await callOnce(store_emojis.fetch)
-// const emoji = store_emojis.getRandomEmoji()
-
-import { gsap } from "gsap";
-
-import TextPlugin from 'gsap-trial/TextPlugin';
-
-gsap.registerPlugin(TextPlugin);
+import anime from 'animejs';
+const { $anime } = useNuxtApp()
 
 onMounted(() => {
-    gsap.to("#name", { duration: 3, text: "Hey, I'm David Fernando", rightToLeft: true })
-});
-
-onUnmounted(() => {
-    gsap.killTweensOf("#name")
-});
+    $anime({
+        targets: '.title p',
+        opacity: [0, 1],
+        translateX: [250, 0],
+        delay: anime.stagger(300, { easing: 'easeOutBounce' })
+    })
+    $anime({
+        // targets: '#illustration-landscape',
+        // opacity: [0, 1],
+        // translateY: [250, 0],
+        // delay: 300,
+        // easing: 'easeOutBounce'
+    })
+})
 
 </script>
 

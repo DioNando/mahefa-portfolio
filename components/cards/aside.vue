@@ -52,14 +52,14 @@ const props = defineProps<{
     flex: 1;
     min-width: 250px;
     border-radius: 1rem;
-    transition: 1s;
     border-radius: 0.25rem;
     height: auto;
     padding: 0.75rem;
+    // transition: 500ms;
 
-    &:hover {
-        flex: 2;
-    }
+    // &:hover {
+    //     flex: 2;
+    // }
 
     .card__header {
         position: relative;
