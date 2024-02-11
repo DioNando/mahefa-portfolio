@@ -3,14 +3,16 @@
         <TextsTitle :title="'Skills.'" />
         <article>
             <div v-for="(item, index) in skills" :key="index" class="skill">
-                <div class="skill__title">{{ item.title }}</div>
-                <div v-for="i in item.details">
+                <div class="skill__title" data-aos="fade-right" data-aos-duration="3000" data-aos-offset="200">{{ item.title
+                }}</div>
+                <div v-for="i in item.details" class="skill__detail" data-aos="fade-right" data-aos-duration="2500"
+                    data-aos-offset="200">
                     {{ i.name }}
                 </div>
             </div>
         </article>
-        <div class="text-center">
-            <p>Lorem ipsum dolor sit amet.</p>
+        <div class="text-center" data-aos="fade-in" data-aos-duration="2000">
+            <p class="font-weight-bold">Lorem ipsum dolor sit amet.</p>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis fugit doloremque quia,
                 incidunt nisi architecto nesciunt vel! Nam nemo, distinctio harum illum, error deleniti commodi
                 sunt animi tempora
@@ -23,7 +25,6 @@
 <script setup lang="ts">
 import dataSkills from '~/data/skills.json'
 const skills = ref(dataSkills)
-
 </script>
   
 <style lang="scss" scoped>

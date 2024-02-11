@@ -3,9 +3,7 @@
         <TextsTitle :title="'My story.'" />
         <article>
             <div class="d-flex justify-center">
-                <!-- <img v-if="theme.isDark" src="/assets/img/df-light.svg" style="width: 40%;" />
-                <img v-else src="/assets/img/df-dark.svg" style="width: 40%;" /> -->
-                <GsapLogo />
+                <IllustrationsLogo />
             </div>
             <div class="d-flex justify-center">
                 <ButtonsCircle />

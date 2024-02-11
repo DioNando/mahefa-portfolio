@@ -1,37 +1,32 @@
 <template>
     <section>
         <TextsTitle :title="'Aside.'" />
-        <div class="cards-container">
-            <CardsAside v-for="(item, index) in photos" :key="index" :data="item" :emoji="store_emojis.getRandomEmoji()" />
+        <div class="cards">
+            <CardsAside v-for="(item, index) in photos" :key="index" :data="item" :emoji="store_emojis.getRandomEmoji()"
+                class="card__element" />
         </div>
     </section>
 </template>
   
 <script setup lang="ts">
 import dataPhotos from '~/data/photos.json'
-import anime from 'animejs';
 
 const store_elements = useElementStore()
 
-const photos = store_elements.getRandomElements(dataPhotos, 6)
+const photos = store_elements.getRandomElements(dataPhotos, 4)
 
 const store_emojis = useEmojiStore()
 await callOnce(store_emojis.fetch)
 
+import anime from 'animejs';
 const { $anime } = useNuxtApp()
 
 onMounted(() => {
     $anime({
-        targets: '.card-animation',
-        opacity: [
-            { value: 0 },
-            { value: 1 },
-        ],
-        translateY: [
-            { value: 270 },
-            { value: 0 },
-        ],
-        delay: anime.stagger(100, { start: 500 })
+        targets: '.card__element',
+        opacity: [0, 1],
+        translateY: [250, 0],
+        delay: anime.stagger(300, {easing: 'easeOutQuad'})
     })
 })
 
@@ -44,11 +39,14 @@ onMounted(() => {
 section {
     @extend %section-accueil;
 }
-
-.cards-container {
+.cards {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+
+    .card__element {
+        opacity: 0;
+    }
 }
 </style>
   
