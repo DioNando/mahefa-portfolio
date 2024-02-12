@@ -1,14 +1,18 @@
 <template>
     <v-card class="card pa-4 bg-surface d-flex flex-column" variant="outlined">
         <template v-slot:title>
-            <p class="text-h5 font-weight-bold mb-3 card--title">Collabs</p>
+            <div class="text-h5 font-weight-bold mb-3 card--title d-flex align-center ga-2">
+                <p>Collabs</p> <img
+                    src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Backhand%20Index%20Pointing%20Down.png"
+                    alt="Backhand Index Pointing Down" width="35" height="35" />
+            </div>
         </template>
 
         <v-form validate-on="submit lazy" @submit.prevent="submit">
             <div>
-                <v-text-field v-model="user.name.value" label="Name" variant="outlined"></v-text-field>
                 <v-text-field v-model="user.email.value" label="Email" variant="outlined"></v-text-field>
-
+                <v-text-field v-model="user.name.value" label="Object" variant="outlined"></v-text-field>
+                <v-textarea auto-grow label="Message" variant="outlined" rows="2"></v-textarea>
             </div>
 
             <v-card-actions class="d-flex pa-0 justify-end">
@@ -67,5 +71,4 @@ const submit = () => {
     &__description {
         @include paragraph-overflow-hidden(2)
     }
-}
-</style>
+}</style>

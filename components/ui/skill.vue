@@ -35,22 +35,41 @@ section {
 
 article {
     display: flex;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    flex-wrap: wrap;
     gap: 2rem;
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @media only screen and (min-width: 600px) {
+        gap: 0;
+        flex-wrap: wrap;
+    }
 
     .skill {
         flex: auto;
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
         gap: 1rem;
+        min-width: fit-content;
+        border-left: 1px $primary solid;
+        padding-left: 1rem;
+        overflow: hidden;
 
         .skill__title {
             font-size: larger;
-            font-weight: bold;
+            font-weight: 600;
             margin-bottom: 0.25rem;
             color: $primary;
+            text-wrap: nowrap;
         }
     }
 }

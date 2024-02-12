@@ -50,8 +50,7 @@ const props = defineProps<{
 
 .card {
     flex: 1;
-    min-width: 250px;
-    border-radius: 1rem;
+    min-width: 300px;
     border-radius: 0.25rem;
     height: auto;
     padding: 0.75rem;

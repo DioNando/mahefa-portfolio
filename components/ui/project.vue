@@ -1,8 +1,8 @@
 <template>
     <section>
         <TextsTitle :title="'Some projects.'" />
-        <div class="cards-container">
-            <div v-for="(item, index) in projects" :key="index" class="card-space">
+        <div class="cards">
+            <div v-for="(item, index) in projects" :key="index" class="card__element">
                 <CardsProject :project="item" :show="true" />
             </div>
         </div>
@@ -49,14 +49,26 @@ section {
     @extend %section-accueil;
 }
 
-.cards-container {
+.cards {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: stretch;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 2rem;
+    overflow-y: hidden;
+    overflow-x: auto;
+    padding-bottom: 1rem;
 
-    .card-space {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @media only screen and (min-width: 600px) {
+        flex-wrap: wrap;
+        padding-bottom: 0;
+    }
+
+    .card__element {
         flex: 1;
         min-width: 350px;
     }

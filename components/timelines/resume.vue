@@ -1,5 +1,5 @@
 <template>
-    <v-timeline align="start" side="end" truncate-line="both">
+    <v-timeline align="start" side="end" truncate-line="start">
         <v-timeline-item v-for="(item, index) in resumes" :icon="item.icon" dot-color="primary" fill-dot
             icon-color="surface">
             <template>

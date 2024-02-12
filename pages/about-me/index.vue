@@ -28,8 +28,9 @@
 }
 
 .about {
+    margin-left: 0.25rem;
     padding-left: 1rem;
-    border-left: 5px solid $primary;
+    border-left: 3px solid $primary;
     font-size: large;
     width: 60%;
 }
