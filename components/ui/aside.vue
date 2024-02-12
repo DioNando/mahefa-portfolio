@@ -2,8 +2,8 @@
     <section>
         <TextsTitle :title="'Aside.'" />
         <div class="cards">
-            <CardsAside v-for="(item, index) in selectedPhotos" :key="index" :data="item" :emoji="store_emojis.getRandomEmoji()"
-                class="card__element" />
+            <CardsAside v-for="(item, index) in selectedPhotos" :key="index" :data="item"
+                :emoji="store_emojis.getRandomEmoji()" class="card__element" />
         </div>
     </section>
 </template>
@@ -26,7 +26,7 @@ onMounted(() => {
         targets: '.card__element',
         opacity: [0, 1],
         translateY: [250, 0],
-        delay: anime.stagger(300, {easing: 'easeOutQuad', from: 'first'})
+        delay: anime.stagger(300, { easing: 'easeOutQuad', from: 'first' })
     })
 })
 
@@ -39,10 +39,21 @@ onMounted(() => {
 section {
     @extend %section-accueil;
 }
+
 .cards {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 1rem;
+    overflow-y: hidden;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @media only screen and (min-width: 600px) {
+        flex-wrap: wrap;
+    }
 
     .card__element {
         opacity: 0;

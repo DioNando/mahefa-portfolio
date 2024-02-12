@@ -27,7 +27,7 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/scss/_variables.scss";
+@import "~/assets/scss/style.scss";
 
 .title {
     font-size: clamp(2rem, 7vw, 4rem);
