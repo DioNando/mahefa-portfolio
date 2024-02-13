@@ -19,6 +19,9 @@
                 facilis
                 porro?</p>
         </div>
+        <!-- <div class="d-flex justify-center mt-4">
+            <IllustrationsLogo />
+        </div> -->
     </section>
 </template>
   

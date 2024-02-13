@@ -1,13 +1,19 @@
 <template>
     <v-container>
         <TextsTitle :title="'Resume.'" />
-        <CardsDots class="d-none d-md-flex mb-4" />
+        <!-- <div class="emoji">
+            <IllustrationsPath />
+        </div> -->
+        <!-- <CardsDots class="mb-4" /> -->
         <div class="about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, repellat dignissimos dolores dicta
             reprehenderit
             voluptatibus perspiciatis exercitationem, qui, eaque sed consequuntur minima ad nesciunt modi quasi unde
             incidunt culpa magni.</div>
         <TimelinesResume />
-        <ButtonsCircle class="circle" />
+        <!-- <div class="d-flex justify-space-between">
+            <IllustrationsLogo />
+            <ButtonsCircle class="circle" />
+        </div> -->
     </v-container>
 </template>
 
@@ -25,5 +31,10 @@
 .about {
     font-size: large;
     width: 70%;
+}
+
+.emoji {
+    position: absolute;
+    width: 100%;
 }
 </style>
