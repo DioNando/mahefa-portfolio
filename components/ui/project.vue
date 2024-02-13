@@ -57,17 +57,30 @@ section {
     gap: 2rem;
     overflow-y: hidden;
     overflow-x: auto;
-    padding-bottom: 1rem;
-
+    padding: 0 1rem 1rem 0;
+    // border-right: 5rem solid linear-gradient(0deg, $primary, $primary);
+    position: relative;
+    
+    // &::after {
+        //     position: absolute;
+        //     content: "";
+        //     width: 50px;
+        //     height: 100%;
+    //     background-color: red;
+    //     right: 0;
+    // }
+    
     &::-webkit-scrollbar {
         display: none;
     }
-
+    
     @media only screen and (min-width: 600px) {
         flex-wrap: wrap;
-        padding-bottom: 0;
+        padding: 0;
+        overflow: visible;
+        border: none;
     }
-
+    
     .card__element {
         flex: 1;
         min-width: 350px;
