@@ -46,6 +46,7 @@ section {
     gap: 1rem;
     overflow-y: hidden;
     overflow-x: auto;
+    scroll-snap-type: x mandatory;
 
     &::-webkit-scrollbar {
         display: none;
@@ -57,6 +58,7 @@ section {
 
     .card__element {
         opacity: 0;
+        scroll-snap-align: center;
     }
 }
 </style>
