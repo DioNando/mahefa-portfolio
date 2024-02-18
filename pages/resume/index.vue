@@ -30,7 +30,11 @@
 
 .about {
     font-size: large;
-    width: 70%;
+    width: 100%;
+
+    @media only screen and (min-width: 600px) {
+        width: 70%;
+    }
 }
 
 .emoji {

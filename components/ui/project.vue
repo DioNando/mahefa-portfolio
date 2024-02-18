@@ -74,8 +74,12 @@ section {
 
     .card__element {
         flex: 1;
-        min-width: 350px;
+        min-width: 80%;
         scroll-snap-align: center;
+
+        @media only screen and (min-width: 600px) {
+            min-width: 350px;
+        }
     }
 }
 </style>

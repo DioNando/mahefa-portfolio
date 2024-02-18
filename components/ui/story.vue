@@ -8,7 +8,6 @@
                     cumque atque. Labore commodi ratione nesciunt.</p>
                 <p>Illo ullam, minus non, repellendus, aspernatur ut in inventore corrupti quod animi vero libero. Quia
                     obcaecati hic nemo id aspernatur.</p>
-                <IllustrationsSpotify />
             </div>
             <div class="d-none d-md-block">
                 <CardsDots />

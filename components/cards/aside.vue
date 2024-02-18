@@ -4,9 +4,11 @@
             <NuxtImg :src="props.data.source" />
         </div>
         <div class="card__content">
-            <div class="card__title mb-3">{{ props.emoji.character + ' ' + store_elements.capitalizeName(props.emoji.unicodeName)
+            <div class="card__title mb-3">{{ props.emoji.character + ' ' +
+                store_elements.capitalizeName(props.emoji.unicodeName)
             }}</div>
-            <div class="card__subtitle text-disabled">{{ store_elements.separateName(props.emoji.group.toUpperCase()) }}</div>
+            <div class="card__subtitle text-disabled">{{ store_elements.separateName(props.emoji.group.toUpperCase()) }}
+            </div>
             <div class="card__description">
                 <v-chip size="small" label v-for="index in 3" :key="index">
                     {{ 'item ' + index }}
@@ -50,10 +52,15 @@ const props = defineProps<{
 
 .card {
     flex: 1;
-    min-width: 300px;
+    min-width: 80%;
     border-radius: 0.25rem;
     height: auto;
     padding: 0.75rem;
+
+    @media only screen and (min-width: 600px) {
+        min-width: 350px;
+    }
+
     // transition: 500ms;
 
     // &:hover {
@@ -104,5 +111,4 @@ const props = defineProps<{
             flex-wrap: wrap;
         }
     }
-}
-</style>
+}</style>

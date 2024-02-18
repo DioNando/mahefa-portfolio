@@ -1,6 +1,7 @@
 <template>
     <v-container>
         <TextsTitle :title="'I\'m David Fernando.'" />
+        <IllustrationsSpotify />
         <div class="about">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis id omnis, dolorum deserunt ipsum cum eos
             natus aperiam. Expedita tempore placeat dolorum magnam cumque non fuga, nulla delectus assumenda architecto?
@@ -32,6 +33,10 @@
     padding-left: 1rem;
     border-left: 3px solid $primary;
     font-size: large;
-    width: 60%;
+    width: 100%;
+
+    @media only screen and (min-width: 600px) {
+        width: 60%;
+    }
 }
 </style>

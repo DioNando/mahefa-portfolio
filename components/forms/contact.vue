@@ -48,7 +48,6 @@ const submit = () => {
     height: 100%;
     box-shadow: rgba($primary, 0.75) 5px 5px, rgba($primary, 0.5) 10px 10px,
         rgba($primary, 0.25) 15px 15px;
-    width: 100%;
 
     @media only screen and (min-width: 600px) {
         max-width: 400px;

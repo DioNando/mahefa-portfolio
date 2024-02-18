@@ -33,7 +33,7 @@ article {
 
     div {
         flex: auto;
-        padding: 0 2rem;
+        padding: 0 1rem;
 
         @media only screen and (max-width: 1000px) {
             width: 100%;
