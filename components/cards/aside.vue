@@ -1,15 +1,16 @@
 <template>
     <div class="card" :class="theme.isDark ? 'dark' : 'light'">
-        <div class="card__header d-none d-sm-block">
+        <!-- <div class="card__header d-none d-sm-block"> -->
+        <div class="card__header">
             <NuxtImg :src="props.data.source" />
         </div>
         <div class="card__content">
-            <div class="card__title mb-3">{{ props.emoji.character + ' ' +
+            <div class="card__title mt-1">{{ props.emoji.character + ' ' +
                 store_elements.capitalizeName(props.emoji.unicodeName)
             }}</div>
-            <div class="card__subtitle text-disabled">{{ store_elements.separateName(props.emoji.group.toUpperCase()) }}
+            <div class="card__subtitle text-disabled d-none">{{ store_elements.separateName(props.emoji.group.toUpperCase()) }}
             </div>
-            <div class="card__description">
+            <div class="card__description d-none">
                 <v-chip size="small" label v-for="index in 3" :key="index">
                     {{ 'item ' + index }}
                 </v-chip>
@@ -31,7 +32,7 @@ const props = defineProps<{
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/scss/_variables.scss";
+@import "~/assets/scss/style.scss";
 
 .light {
     // background-image: linear-gradient(45deg, $primary, $quaternary, );
@@ -53,39 +54,27 @@ const props = defineProps<{
 .card {
     flex: 1;
     min-width: 80%;
+    overflow: hidden;
     border-radius: 0.25rem;
     height: auto;
-    padding: 0.75rem;
+    padding: 0.25rem;
+    transition: 1s ease-in-out;
 
-    @media only screen and (min-width: 600px) {
-        min-width: 350px;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+        min-width: 100%;
     }
 
-    // transition: 500ms;
-
-    // &:hover {
-    //     flex: 2;
-    // }
-
     .card__header {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 20vh;
-        border-radius: .25rem;
-        overflow: hidden;
+        height: 30vh;
 
         img {
             object-fit: cover;
-            width: 100%;
             height: 100%;
-        }
-
-        .card__icon {
-            position: absolute;
-            font-size: 3rem;
-            transition: 1s;
+            width: 100%;
+            display: block;
         }
     }
 
@@ -93,9 +82,10 @@ const props = defineProps<{
         padding: 0.5rem;
 
         .card__title {
-            font-size: large;
-            font-weight: bold;
-            color: $secondary;
+            font-size: small;
+            // font-weight: bold;
+            // color: $secondary;
+            @include paragraph-overflow-hidden(1)
         }
 
         .card__subtitle {
@@ -111,4 +101,12 @@ const props = defineProps<{
             flex-wrap: wrap;
         }
     }
-}</style>
+
+    @media only screen and (min-width: 600px) {
+        .card__header {
+            height: auto;
+        }
+    }
+
+}
+</style>

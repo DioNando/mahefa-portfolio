@@ -10,13 +10,13 @@
   
 <script setup lang="ts">
 import photos from '~/data/photos.json'
+const store_emojis = useEmojiStore()
+await callOnce(store_emojis.fetch)
 
 const store_elements = useElementStore()
 
-const selectedPhotos = store_elements.getRandomElements(photos, 7)
+const selectedPhotos = store_elements.getRandomElements(photos, photos.length)
 
-const store_emojis = useEmojiStore()
-await callOnce(store_emojis.fetch)
 
 import anime from 'animejs';
 const { $anime } = useNuxtApp()
@@ -52,14 +52,42 @@ section {
         display: none;
     }
 
-    @media only screen and (min-width: 600px) {
-        flex-wrap: wrap;
-    }
-
     .card__element {
-        opacity: 0;
         scroll-snap-align: center;
     }
+
+    @media only screen and (min-width: 600px) {
+        display: block;
+        columns: 3;
+        column-gap: 1rem;
+        break-inside: avoid;
+
+        @media only screen and (min-width: 1200px) {
+            columns: 4;
+        }
+
+        .card__element {
+            margin-bottom: 1rem;
+        }
+    }
 }
+
+// .cards {
+//     columns: 2;
+//     column-gap: 1rem;
+//     break-inside: avoid;
+
+//     @media only screen and (min-width: 600px) {
+//         columns: 3;
+//     }
+
+//     @media only screen and (min-width: 1200px) {
+//         columns: 4;
+//     }
+
+//     .card__element {
+//         margin-bottom: 1rem;
+//     }
+// }
 </style>
   

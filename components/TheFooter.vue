@@ -4,7 +4,7 @@
     <!-- </div> -->
     <!-- <IllustrationsBars id="footer__bars" class="d-none d-md-block" /> -->
     <IllustrationsWaves id="footer__waves" class="d-none d-md-block" />
-    <NuxtParticles id="footer__particles" :options="particles" @load="onLoad"></NuxtParticles>
+    <!-- <NuxtParticles id="footer__particles" :options="particles" @load="onLoad"></NuxtParticles> -->
     <v-footer class="footer__elements d-flex flex-column" :class="!theme.isDark && 'bg-primary'">
       <div class="link">
         <NuxtLink v-for="l in store_elements.navigation" :key="l.title" :to="l.link" class="router-link">
