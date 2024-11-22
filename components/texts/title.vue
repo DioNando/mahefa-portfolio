@@ -27,14 +27,12 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/scss/style.scss";
-
 .title {
     font-size: clamp(2rem, 7vw, 4rem);
     font-weight: 900;
     margin-top: 1rem;
     background-size: 100%;
-    -webkit-background-clip: text;
+    background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;

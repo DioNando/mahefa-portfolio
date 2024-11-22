@@ -115,11 +115,9 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/scss/style.scss";
-
 .light {
-    stroke: darken($color: $light, $amount: 15%);
-    fill: darken($color: $light, $amount: 15%);
+    stroke: color.adjust($light, $lightness: -15%);
+    fill: color.adjust($light, $lightness: 15%);
 }
 
 .dark {

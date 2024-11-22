@@ -43,8 +43,6 @@ onUnmounted(() => {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/scss/style.scss";
-
 .nav--light {
     background-image: linear-gradient(45deg, $primary, $quaternary, );
 
@@ -58,6 +56,7 @@ onUnmounted(() => {
 
     .router-link-exact-active {
         color: $dark;
+        // color: $light;
     }
 }
 

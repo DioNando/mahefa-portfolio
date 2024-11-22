@@ -18,8 +18,6 @@ const theme = useThemeStore()
 </script>
   
 <style lang="scss" scoped>
-@import "~/assets/scss/style.scss";
-
 section {
     @extend %section-accueil;
     margin-bottom: 2rem;

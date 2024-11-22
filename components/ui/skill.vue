@@ -30,8 +30,6 @@ import skills from '~/data/skills.json'
 </script>
   
 <style lang="scss" scoped>
-@import "~/assets/scss/style.scss";
-
 section {
     @extend %section-accueil;
 }
