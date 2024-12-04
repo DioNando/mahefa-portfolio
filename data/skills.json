@@ -1,32 +1,66 @@
 [
   {
-    "title": "Coding",
+    "title": "Front-end Technologies",
     "details": [
-      { "name": "Javascript" },
-      { "name": "PHP" },
-      { "name": "Python" },
-      { "name": "JAVA" }
+      { "name": "HTML" },
+      { "name": "CSS & SASS (Bootstrap, Tailwind)" },
+      { "name": "JavaScript" },
+      { "name": "TypeScript" },
+      { "name": "JS Frameworks (NodeJs, VueJs, Angular)" }
     ]
   },
   {
-    "title": "UX Research",
-    "details": [{ "name": "Prototyping" }, { "name": "Planning" }]
-  },
-  {
-    "title": "Design & Product",
+    "title": "Back-end Technologies",
     "details": [
-      { "name": "UI & UX" },
-      { "name": "Figma" },
-      { "name": "Photoshop" },
-      { "name": "Illustrator" }
+      { "name": "PHP (Laravel, CodeIgniter)" },
+      { "name": "Java (Spring Boot)" },
+      { "name": "Python" },
+      { "name": "SQL" }
     ]
   },
   {
     "title": "Soft Skills",
     "details": [
+      { "name": "Teamwork" },
+      { "name": "Organization" },
       { "name": "Adaptability" },
-      { "name": "Curiosity" },
-      { "name": "Teamwork" }
+      { "name": "Creativity & Innovation" }
+    ]
+  },
+  {
+    "title": "DevOps & Containerization",
+    "details": [
+      { "name": "Docker" },
+      { "name": "Kubernetes" },
+      { "name": "Git" },
+      { "name": "GitLab CI" },
+      { "name": "Kafka" }
+    ]
+  },
+  {
+    "title": "Design & Prototyping",
+    "details": [
+      { "name": "Figma" },
+      { "name": "Illustrator" },
+      { "name": "Photoshop" },
+      { "name": "Lightroom" }
+    ]
+  },
+  {
+    "title": "CMS & Content Management",
+    "details": [{ "name": "WordPress" }]
+  },
+  {
+    "title": "Methodologies & Modeling",
+    "details": [{ "name": "Agile" }, { "name": "UML" }, { "name": "Merise" }]
+  },
+  {
+    "title": "Project Management & Collaboration",
+    "details": [
+      { "name": "Jira" },
+      { "name": "Trello" },
+      { "name": "Notion" },
+      { "name": "Gantt" }
     ]
   }
 ]

@@ -1,12 +1,17 @@
 <template>
   <v-container>
     <TextsTitle :title="'I\'m David Fernando.'" />
-    <IllustrationsSpotify />
+    <!-- <IllustrationsSpotify /> -->
+    <div class="mb-4">
+      <IllustrationsLogo />
+    </div>
     <div class="about">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis id
-      omnis, dolorum deserunt ipsum cum eos natus aperiam. Expedita tempore
-      placeat dolorum magnam cumque non fuga, nulla delectus assumenda
-      architecto?
+      Passionate about IT and soon-to-be state engineer graduate, I'm seeking an
+      internship to launch my professional career starting from February 2025. I
+      have acquired solid skills in web development, including JavaScript, PHP,
+      and Java. I am ready to put my enthusiasm for teamwork, responsiveness,
+      and analytical thinking at the service of your organization to contribute
+      to the development of impactful and innovative solutions.
     </div>
     <div>
       <NuxtLink to="/resume">

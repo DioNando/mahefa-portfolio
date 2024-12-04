@@ -19,9 +19,6 @@
                 facilis
                 porro?</p>
         </div>
-        <!-- <div class="d-flex justify-center mt-4">
-            <IllustrationsLogo />
-        </div> -->
     </section>
 </template>
   
@@ -49,10 +46,10 @@ article {
         display: none;
     }
 
-    @media only screen and (min-width: 600px) {
-        gap: 0;
-        flex-wrap: wrap;
-    }
+    // @media only screen and (min-width: 600px) {
+    //     gap: 0;
+    //     flex-wrap: wrap;
+    // }
 
     .skill {
         flex: auto;
