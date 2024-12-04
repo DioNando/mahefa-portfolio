@@ -84,8 +84,6 @@ const toggleSidebar = () => {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/scss/_variables.scss";
-
 .light {
     background-image: linear-gradient(45deg, $secondary, $quaternary, );
 }

@@ -66,8 +66,6 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/scss/style.scss";
-
 .dots {
     display: grid;
     grid-template-columns: repeat(20, 1fr);

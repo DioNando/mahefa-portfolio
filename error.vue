@@ -50,8 +50,6 @@ const onLoad = (container: Container) => {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/scss/style.scss";
-
 section {
     width: 100%;
     height: 100%;

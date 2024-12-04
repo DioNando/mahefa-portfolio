@@ -24,8 +24,6 @@ const scrollToGallery = () => {
 </script>
 
 <style lang="scss">
-@import "~/assets/scss/_variables.scss";
-
 .btn {
     border: 1px $primary solid;
     padding: 1rem 1.5rem;

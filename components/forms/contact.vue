@@ -39,8 +39,6 @@ const submit = () => {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/scss/style.scss";
-
 .card {
     transition-duration: 400ms;
     transition-property: box-shadow;

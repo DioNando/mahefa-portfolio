@@ -60,8 +60,6 @@ const onLoad = (container: Container) => {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/scss/style.scss";
-
 footer {
   position: relative;
   overflow: hidden;

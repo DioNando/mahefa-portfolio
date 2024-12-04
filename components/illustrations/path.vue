@@ -54,8 +54,6 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/scss/style.scss";
-
 .container {
     position: relative;
 }
