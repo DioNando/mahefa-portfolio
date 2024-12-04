@@ -13,14 +13,24 @@
       and analytical thinking at the service of your organization to contribute
       to the development of impactful and innovative solutions.
     </div>
-    <div>
+    <div class="d-flex ga-3">
+      <NuxtLink href="/docs/CV_Tolotra_David_Fernando.pdf" target="_blank" rel="noopener noreferrer">
+        <v-btn
+          rounded
+          color="primary"
+          append-icon="mdi-download"
+          class="text-none"
+        >
+          Download
+        </v-btn>
+      </NuxtLink>
       <NuxtLink to="/resume">
         <v-btn
           rounded
           variant="text"
           color="primary"
-          append-icon="mdi-chevron-right"
           class="text-none"
+          append-icon="mdi-chevron-right"
         >
           Go to resume
         </v-btn>
