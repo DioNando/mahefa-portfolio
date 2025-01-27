@@ -16,9 +16,9 @@ export default defineNuxtConfig({
       });
     },
     "@pinia/nuxt",
-    "@hypernym/nuxt-anime",
     "@nuxt/image",
     "@nuxtjs/google-fonts",
+    "@hypernym/nuxt-anime",
     "nuxt-aos",
     "nuxt-particles",
   ],

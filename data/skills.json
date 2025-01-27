@@ -1,21 +1,23 @@
 [
   {
-    "title": "Front-end Technologies",
+    "title": "Front-end",
     "details": [
       { "name": "HTML" },
       { "name": "CSS & SASS (Bootstrap, Tailwind)" },
-      { "name": "JavaScript" },
-      { "name": "TypeScript" },
-      { "name": "JS Frameworks (NodeJs, VueJs, Angular)" }
+      { "name": "JavaScript/TypeScript" },
+      { "name": "NodeJs" },
+      { "name": "VueJs, NuxtJs" },
+      { "name": "Angular" }
     ]
   },
   {
-    "title": "Back-end Technologies",
+    "title": "Back-end",
     "details": [
       { "name": "PHP (Laravel, CodeIgniter)" },
       { "name": "Java (Spring Boot)" },
       { "name": "Python" },
-      { "name": "SQL" }
+      { "name": "MySQL" },
+      { "name": "MongoDB" }
     ]
   },
   {
@@ -24,7 +26,7 @@
       { "name": "Teamwork" },
       { "name": "Organization" },
       { "name": "Adaptability" },
-      { "name": "Creativity & Innovation" }
+      { "name": "Creativity" }
     ]
   },
   {
@@ -34,7 +36,8 @@
       { "name": "Kubernetes" },
       { "name": "Git" },
       { "name": "GitLab CI" },
-      { "name": "Kafka" }
+      { "name": "Kafka" },
+      { "name": "Airflow" }
     ]
   },
   {

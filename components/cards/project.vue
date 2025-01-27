@@ -13,10 +13,10 @@
         </template>
         <v-card-actions class="d-flex justify-space-between">
             <v-icon :icon="project.icon" size="x-large"></v-icon>
-            <v-btn class="text-none" to="/resume" variant="outlined" color="primary" append-icon="mdi-chevron-right"
+            <!-- <v-btn class="text-none" to="/resume" variant="outlined" color="primary" append-icon="mdi-chevron-right"
                 :class="[show ? '' : 'd-none']">
                 View more
-            </v-btn>
+            </v-btn> -->
         </v-card-actions>
     </v-card>
 </template>

@@ -14,14 +14,24 @@
       to the development of impactful and innovative solutions.
     </div>
     <div class="d-flex ga-3">
-      <NuxtLink href="/docs/CV_Tolotra_David_Fernando.pdf" target="_blank" rel="noopener noreferrer">
+      <NuxtLink href="/docs/CV_fr_RAZAFIMAHEFA_Tolotra_David_Fernando.pdf" target="_blank" rel="noopener noreferrer">
         <v-btn
           rounded
           color="primary"
           append-icon="mdi-download"
           class="text-none"
         >
-          Download
+          CV French
+        </v-btn>
+      </NuxtLink>
+      <NuxtLink href="/docs/CV_en_RAZAFIMAHEFA_Tolotra_David_Fernando.pdf" target="_blank" rel="noopener noreferrer">
+        <v-btn
+          rounded
+          color="primary"
+          append-icon="mdi-download"
+          class="text-none"
+        >
+          CV English
         </v-btn>
       </NuxtLink>
       <NuxtLink to="/resume">

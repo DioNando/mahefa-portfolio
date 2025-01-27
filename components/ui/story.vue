@@ -5,13 +5,15 @@
       <div class="">
         <p class="text-h5 font-weight-bold">What about me</p>
         <p>
-          Passionate about IT and soon-to-be state engineer graduate, I'm
-          seeking an internship to launch my professional career starting from
-          February 2025. I have acquired solid skills in web development,
-          including JavaScript, PHP, and Java. I am ready to put my enthusiasm
-          for teamwork, responsiveness, and analytical thinking at the service
-          of your organization to contribute to the development of impactful and
-          innovative solutions.
+          Proven track record in managing end-to-end development projects, from
+          initial conception through to successful deployment. My technical
+          expertise centers on web and mobile development, with particular
+          proficiency in JavaScript, PHP, and Java. This is complemented by a
+          strong foundation in UX/UI design, enabling me to deliver solutions
+          that are both technically robust and user-centric. My strengths
+          include collaborative teamwork, quick adaptability, and strong
+          analytical skills - assets I'm eager to leverage to help your
+          organization achieve its business objectives.
         </p>
       </div>
       <div class="d-none d-md-block">

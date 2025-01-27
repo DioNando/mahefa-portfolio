@@ -2,7 +2,7 @@
     <section>
         <TextsTitle :title="'Some projects.'" />
         <div class="cards">
-            <div v-for="(item, index) in projects" :key="index" class="card__element">
+            <div v-for="(item, index) in projects.slice(0, 3)" :key="index" class="card__element">
                 <CardsProject :project="item" :show="true" />
             </div>
         </div>

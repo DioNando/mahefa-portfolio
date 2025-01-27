@@ -18,8 +18,12 @@
         <template v-slot:prepend>
           <v-icon :icon="item.icon"></v-icon>
         </template>
-
-        <v-list-item-title v-text="item.text"></v-list-item-title>
+        <NuxtLink :href="item.to" target="_blank" rel="noopener noreferrer">
+          <v-list-item-title
+            v-text="item.text"
+            class="link"
+          ></v-list-item-title>
+        </NuxtLink>
       </v-list-item>
     </v-list>
   </v-card>
@@ -29,19 +33,23 @@
 const items = [
   {
     text: "+212 6 14 63 12 25",
-    icon: "mdi-phone",
+    icon: "mdi-whatsapp",
+    to: "https://wa.me/212614631225",
   },
   {
     text: "mahefa.fernando@gmail.com",
     icon: "mdi-email",
+    to: "mailto:mahefa.fernando@gmail.com",
   },
   {
     text: "David Mahefa",
     icon: "mdi-linkedin",
+    to: "https://www.linkedin.com/in/david-mahefa/",
   },
   {
     text: "@DioNando",
     icon: "mdi-github",
+    to: "https://github.com/DioNando",
   },
   {
     text: "Hay Riad, Rabat, Morocco",
@@ -72,6 +80,13 @@ const items = [
     .card--title,
     .v-icon {
       transition-duration: 400ms;
+      color: $primary;
+    }
+  }
+
+  .link {
+    transition-duration: 250ms;
+    &:hover {
       color: $primary;
     }
   }
