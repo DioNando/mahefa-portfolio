@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="d-none d-lg-flex flex-column ga-5">
-                    <v-icon v-for="(i, index) of links" :key="index" :icon="i.name"
+                    <v-icon v-for="(i, index) of links" :key="index" :icon="i.text"
                         :color="theme.isDark ? 'light' : 'primary'"></v-icon>
                 </div>
             </div>

@@ -2,13 +2,18 @@
     <section>
         <TextsTitle :title="'Aside.'" />
         <div class="cards">
-            <CardsAside v-for="(item, index) in selectedPhotos" :key="index" :data="item"
-                :emoji="store_emojis.getRandomEmoji()" class="card__element" />
+            <div v-for="(item, index) in projects" :key="index" class="card__element">
+                <CardsProject :project="item" :show="true" />
+            </div>
+            <div v-for="(item, index) in projects" :key="index" class="card__element">
+                <CardsProject :project="item" :show="true" />
+            </div>
         </div>
     </section>
 </template>
   
 <script setup lang="ts">
+import projects from '~/data/projects.json'
 import photos from '~/data/photos.json'
 const store_emojis = useEmojiStore()
 await callOnce(store_emojis.fetch)
@@ -41,51 +46,43 @@ section {
 .cards {
     display: flex;
     flex-wrap: nowrap;
-    gap: 1rem;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 2rem;
     overflow-y: hidden;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
 
     &::-webkit-scrollbar {
         display: none;
     }
 
     .card__element {
+        flex: 1;
+        min-width: 80%;
         scroll-snap-align: center;
+
+        @media only screen and (min-width: 600px) {
+            min-width: 350px;
+        }
     }
 
     @media only screen and (min-width: 600px) {
         display: block;
-        columns: 3;
-        column-gap: 1rem;
+        columns: 2;
+        column-gap: 2rem;
         break-inside: avoid;
 
         @media only screen and (min-width: 1200px) {
-            columns: 4;
+            columns: 3;
         }
 
         .card__element {
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
         }
     }
 }
-
-// .cards {
-//     columns: 2;
-//     column-gap: 1rem;
-//     break-inside: avoid;
-
-//     @media only screen and (min-width: 600px) {
-//         columns: 3;
-//     }
-
-//     @media only screen and (min-width: 1200px) {
-//         columns: 4;
-//     }
-
-//     .card__element {
-//         margin-bottom: 1rem;
-//     }
-// }
 </style>
   

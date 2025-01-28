@@ -10,8 +10,8 @@ export const useElementStore = defineStore("elementStore", {
         link: "/about-me",
       },
       {
-        title: "Resume",
-        link: "/resume",
+        title: "Projects",
+        link: "/projects",
       },
     ] as any[],
   }),

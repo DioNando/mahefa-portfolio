@@ -1,0 +1,50 @@
+[
+  {
+    "logo": "vue.png",
+    "name": "Vue.js"
+  },
+  {
+    "logo": "nuxt.png",
+    "name": "Nuxt.js"
+  },
+  {
+    "logo": "angular.png",
+    "name": "Angular"
+  },
+  {
+    "logo": "react.png",
+    "name": "React.js"
+  },
+  {
+    "logo": "laravel.png",
+    "name": "Laravel"
+  },
+  {
+    "logo": "java.png",
+    "name": "Java"
+  },
+  {
+    "logo": "python.png",
+    "name": "Python"
+  },
+  {
+    "logo": "wordpress.png",
+    "name": "Wordpress.js"
+  },
+  {
+    "logo": "docker.png",
+    "name": "Docker"
+  },
+  {
+    "logo": "kubernetes.png",
+    "name": "Kubernetes"
+  },
+  {
+    "logo": "sass.png",
+    "name": "SASS"
+  },
+  {
+    "logo": "figma.png",
+    "name": "Figma"
+  }
+]

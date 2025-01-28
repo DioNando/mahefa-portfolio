@@ -2,8 +2,8 @@
   <section>
     <TextsTitle :title="'My story.'" />
     <article>
-      <div class="">
-        <p class="text-h5 font-weight-bold">What about me</p>
+      <div>
+        <p class="text-h5 text-end font-weight-bold">What about me</p>
         <p>
           Proven track record in managing end-to-end development projects, from
           initial conception through to successful deployment. My technical
@@ -17,7 +17,8 @@
         </p>
       </div>
       <div class="d-none d-md-block">
-        <CardsDots />
+        <!-- <CardsDots /> -->
+        <IllustrationsLogo />
       </div>
     </article>
   </section>
@@ -44,7 +45,7 @@ section {
     }
 
     div:first-child {
-      text-align: end;
+      text-align: justify;
       flex: 2;
     }
 

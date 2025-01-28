@@ -1,21 +1,14 @@
 <template>
   <v-container>
-    <TextsTitle :title="'Resume.'" />
-    <!-- <div class="emoji">
-            <IllustrationsPath />
-        </div> -->
-    <!-- <CardsDots class="mb-4" /> -->
+    <TextsTitle :title="'Projects.'" />
     <div class="about">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, repellat
       dignissimos dolores dicta reprehenderit voluptatibus perspiciatis
       exercitationem, qui, eaque sed consequuntur minima ad nesciunt modi quasi
       unde incidunt culpa magni.
     </div>
-    <TimelinesResume />
-    <!-- <div class="d-flex justify-space-between">
-            <IllustrationsLogo />
-            <ButtonsCircle class="circle" />
-        </div> -->
+    <UiAside />
+
   </v-container>
 </template>
 

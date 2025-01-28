@@ -39,11 +39,17 @@
         facilis porro?
       </p>
     </div>
+    <article class="d-flex flex-wrap justify-center ga-2">
+      <div v-for="(item, index) in technos" :key="index" class="techno">
+        <img :src="`/img/technos/${item.logo}`" :alt="item.name" />
+      </div>
+    </article>
   </section>
 </template>
 
 <script setup lang="ts">
 import skills from "~/data/skills.json";
+import technos from "~/data/technos.json";
 </script>
 
 <style lang="scss" scoped>
@@ -68,6 +74,25 @@ section {
     margin-bottom: 0.25rem;
     color: $primary;
     text-wrap: nowrap;
+  }
+}
+
+.techno {
+  display: inline-block;
+  height: 5rem;
+  background-color: color.adjust($light, $lightness: -5%);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  filter: grayscale(100%);
+  transition: all 300ms ease-in-out;
+
+  &:hover {
+    filter: grayscale(0%);
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 }
 </style>
