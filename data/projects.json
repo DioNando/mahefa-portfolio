@@ -1,26 +1,74 @@
 [
   {
-    "title": "Tempora, numquam laborum?",
-    "type": "Tempora",
-    "icon": "mdi-draw",
-    "description": "Adipisci facilis ullam maxime ducimus aliquid quae repudiandae ratione modi cupiditate dolores recusandae odio odit molestiae provident porro dolor quis rem, dolorem atque voluptatem nostrum, nobis, deserunt numquam asperiores. Ipsa!"
+    "title": "Real-Time Messaging System",
+    "description": "Creation of a real-time messaging application with notifications, using WebSockets and a RESTful architecture.",
+    "technologies": ["Nuxt.js", "Spring Boot", "WebSocket", "SCSS"],
+    "role": "Frontend Developer",
+    "icon": "mdi-monitor",
+    "link": "https://github.com/username/messaging-system",
+    "image": "url-to-image.jpg"
   },
   {
-    "title": "Emnis recusandae. Eos veniam eni",
-    "type": "Gic eius",
+    "title": "E-commerce WordPress Website Redesign",
+    "description": "Modernization of an e-commerce website using WordPress with WooCommerce integration to improve user experience and increase sales.",
+    "technologies": ["WordPress", "WooCommerce", "CSS", "JavaScript"],
+    "role": "UI/UX Designer",
+    "icon": "mdi-palette",
+    "link": "https://example-ecommerce.com",
+    "image": "url-to-image.jpg"
+  },
+  {
+    "title": "Data Visualization Dashboard",
+    "description": "Development of an interactive dashboard to visualize weather and traffic data, integrating Kafka and MongoDB.",
+    "technologies": ["Apache Kafka", "MongoDB", "Python", "Airflow", "Docker"],
+    "role": "Fullstack Developer",
     "icon": "mdi-code-tags",
-    "description": "Aporro dolor quis rem, dolorem atque voluptatem nostrum, nobis, bore quasi voluptates, expedita, commodi distinctio illum hic eius ratione eaque! Num deserunt numquam asperiores. Ipsa!"
+    "link": "https://github.com/username/data-dashboard",
+    "image": "url-to-image.jpg"
   },
   {
-    "title": "Magni, numquam dolores!",
-    "type": "Magni",
-    "icon": "mdi-earth",
-    "description": "Eius natus, sunt ea voluptas dolor omnis recusandae. Eos veniam enim labore quasi voluptates, expedita, commodi distinctio illum hic eius ratione eaque! Numquam iusto corrupti, neque vero ducimus recusandae itaque?"
+    "title": "Stock Management Application",
+    "description": "Development of a complete application to manage a store's stock using Laravel and Vue.js.",
+    "technologies": ["Laravel", "Vue.js", "MySQL", "Bootstrap"],
+    "role": "Fullstack Developer",
+    "icon": "mdi-code-tags",
+    "link": "https://github.com/username/gestion-stocks",
+    "image": "url-to-image.jpg"
   },
   {
-    "title": "Enim, ex odio!",
-    "type": "Enim",
-    "icon": "mdi-fruit-watermelon",
-    "description": "Similique itaque suscipit eum ducimus aperiam consectetur corporis culpa unde. Atque, similique. Quia molestias soluta qui! Ipsa pariatur temporibus magnam, facere nemo dolorem molestiae nesciunt corrupti quam accusantium, aspernatur vel!"
+    "title": "Graphic Charter and Visual Identity",
+    "description": "Creation of a complete graphic charter for a startup, including logo, color palette, and typography.",
+    "technologies": ["Adobe Illustrator", "Adobe Photoshop", "Figma"],
+    "role": "Graphic Designer",
+    "icon": "mdi-brush",
+    "link": "https://dribbble.com/username",
+    "image": "url-to-image.jpg"
+  },
+  {
+    "title": "Mobile Task Management Application",
+    "description": "Design and development of an intuitive mobile application for daily task management.",
+    "technologies": ["Flutter", "Dart", "Firebase"],
+    "role": "Mobile Developer",
+    "icon": "mdi-cellphone",
+    "link": "https://play.google.com/store/apps/details?id=com.username.taskmanager",
+    "image": "url-to-image.jpg"
+  },
+  {
+    "title": "Portfolio Website",
+    "description": "Creation of a personal portfolio website with smooth navigation, responsiveness, and project integration.",
+    "technologies": ["Nuxt.js", "Tailwind CSS", "SCSS"],
+    "role": "UI/UX Designer",
+    "icon": "mdi-palette",
+    "link": "https://username.dev",
+    "image": "url-to-image.jpg"
+  },
+  {
+    "title": "User Interface Redesign for a SaaS Platform",
+    "description": "Complete redesign of the user interface for a SaaS platform to improve usability and customer satisfaction.",
+    "technologies": ["Figma", "React", "Tailwind CSS"],
+    "role": "UI/UX Designer",
+    "icon": "mdi-palette",
+    "link": "https://dribbble.com/username",
+    "image": "url-to-image.jpg"
   }
 ]

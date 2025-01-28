@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-btn :icon="themeStore.isDark ? 'mdi-moon-waxing-crescent' : 'mdi-white-balance-sunny'" @click="toggleTheme"
+    <v-btn :icon="themeStore.isDark ? 'mdi-moon-waxing-crescent' : 'mdi-white-balance-sunny'"  @click="toggleTheme"
       variant="tonal">
     </v-btn>
   </div>

@@ -1,14 +1,13 @@
 <template>
   <v-container>
     <TextsTitle :title="'Projects.'" />
-    <div class="about">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, repellat
-      dignissimos dolores dicta reprehenderit voluptatibus perspiciatis
-      exercitationem, qui, eaque sed consequuntur minima ad nesciunt modi quasi
-      unde incidunt culpa magni.
-    </div>
+      <div class="about">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, repellat
+        dignissimos dolores dicta reprehenderit voluptatibus perspiciatis
+        exercitationem, qui, eaque sed consequuntur minima ad nesciunt modi
+        quasi unde incidunt culpa magni.
+      </div>
     <UiAside />
-
   </v-container>
 </template>
 

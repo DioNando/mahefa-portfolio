@@ -5,23 +5,12 @@
             <div v-for="(item, index) in projects" :key="index" class="card__element">
                 <CardsProject :project="item" :show="true" />
             </div>
-            <div v-for="(item, index) in projects" :key="index" class="card__element">
-                <CardsProject :project="item" :show="true" />
-            </div>
         </div>
     </section>
 </template>
   
 <script setup lang="ts">
 import projects from '~/data/projects.json'
-import photos from '~/data/photos.json'
-const store_emojis = useEmojiStore()
-await callOnce(store_emojis.fetch)
-
-const store_elements = useElementStore()
-
-const selectedPhotos = store_elements.getRandomElements(photos, photos.length)
-
 
 import anime from 'animejs';
 const { $anime } = useNuxtApp()
@@ -31,7 +20,7 @@ onMounted(() => {
         targets: '.card__element',
         opacity: [0, 1],
         translateY: [250, 0],
-        delay: anime.stagger(300, { easing: 'easeOutQuad', from: 'first' })
+        delay: anime.stagger(300, { easing: 'easeOutBack', from: 'first' })
     })
 })
 
