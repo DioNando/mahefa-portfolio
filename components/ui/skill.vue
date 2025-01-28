@@ -8,7 +8,7 @@
           :key="index"
           v-slot="{ isSelected, toggle }"
         >
-          <v-card class="skill bg-surface" flat>
+          <div class="skill">
             <div
               class="skill__title"
               data-aos="fade-right"
@@ -26,18 +26,18 @@
             >
               {{ i.name }}
             </div>
-          </v-card>
+          </div>
         </v-slide-group-item>
       </v-slide-group>
     </article>
     <div class="text-center text-disabled">
-      <p class="text-h4 font-weight-bold">Lorem ipsum dolor sit amet.</p>
-      <p>
+      <p class="text-h4 font-weight-bold">Some of my favorites tools.</p>
+      <!-- <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis fugit
         doloremque quia, incidunt nisi architecto nesciunt vel! Nam nemo,
         distinctio harum illum, error deleniti commodi sunt animi tempora
         facilis porro?
-      </p>
+      </p> -->
     </div>
     <article class="d-flex flex-wrap justify-center ga-2">
       <div v-for="(item, index) in technos" :key="index" class="techno">
@@ -63,8 +63,12 @@ section {
   align-items: flex-start;
   gap: 0.75rem;
   min-width: fit-content;
+  height: fit-content;
   margin: 0 0.5rem;
-  border: 1px $primary solid;
+  // border: 1px $primary solid;
+  border-left: 1px $primary solid;
+  // border-top-right-radius: 0.5rem;
+  // border-bottom-right-radius: 0.5rem;
   padding: 1rem;
   overflow: hidden;
 
@@ -74,21 +78,29 @@ section {
     margin-bottom: 0.25rem;
     color: $primary;
     text-wrap: nowrap;
+    border-bottom: 1px $primary solid;
+    padding-bottom: 0.5rem;
   }
 }
 
 .techno {
   display: inline-block;
-  height: 5rem;
+  height: 3.5rem;
   background-color: color.adjust($light, $lightness: -5%);
   border-radius: 0.5rem;
-  padding: 0.75rem;
+  padding: 0.5rem;
   filter: grayscale(100%);
   transition: all 300ms ease-in-out;
+
+  @media only screen and (min-width: 1200px) {
+    height: 4.5rem;
+    padding: 0.75rem;
+  }
 
   &:hover {
     filter: grayscale(0%);
   }
+
   img {
     width: 100%;
     height: 100%;

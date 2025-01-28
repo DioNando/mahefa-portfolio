@@ -46,5 +46,9 @@
   {
     "logo": "figma.png",
     "name": "Figma"
+  },
+  {
+    "logo": "illustrator.png",
+    "name": "Illustrator"
   }
 ]

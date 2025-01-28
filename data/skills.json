@@ -7,7 +7,8 @@
       { "name": "JavaScript/TypeScript" },
       { "name": "NodeJs" },
       { "name": "VueJs, NuxtJs" },
-      { "name": "Angular" }
+      { "name": "Angular" },
+      { "name": "ReactJs" }
     ]
   },
   {
@@ -26,7 +27,10 @@
       { "name": "Teamwork" },
       { "name": "Organization" },
       { "name": "Adaptability" },
-      { "name": "Creativity" }
+      { "name": "Creativity" },
+      { "name": "Problem-solving" },
+      { "name": "Critical thinking" },
+      { "name": "Communication" }
     ]
   },
   {
@@ -46,23 +50,24 @@
       { "name": "Figma" },
       { "name": "Illustrator" },
       { "name": "Photoshop" },
-      { "name": "Lightroom" }
+      { "name": "Lightroom" },
+      { "name": "Canva" }
     ]
   },
   {
-    "title": "CMS & Content Management",
-    "details": [{ "name": "WordPress" }]
+    "title": "CMS",
+    "details": [{ "name": "WordPress" }, { "name": "WooCommerce" }]
   },
   {
     "title": "Methodologies & Modeling",
-    "details": [{ "name": "Agile" }, { "name": "UML" }, { "name": "Merise" }]
+    "details": [{ "name": "Agile" }, { "name": "SCRUM" }, { "name": "UML" }, { "name": "Merise" }]
   },
   {
-    "title": "Project Management & Collaboration",
+    "title": "Project Management",
     "details": [
-      { "name": "Jira" },
-      { "name": "Trello" },
       { "name": "Notion" },
+      { "name": "Trello" },
+      { "name": "Jira" },
       { "name": "Gantt" }
     ]
   }
