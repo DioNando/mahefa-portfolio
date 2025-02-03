@@ -41,7 +41,7 @@
         </div>
       </div>
     </div>
-    <TimelinesResume />
+    <!-- <TimelinesResume /> -->
   </v-container>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <UiLandscape />
-    <UiProject />
+    <!-- <UiProject /> -->
     <UiSkill />
     <UiStory />
     <UiEducation />
