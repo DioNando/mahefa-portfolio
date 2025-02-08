@@ -40,7 +40,6 @@ const handleError = () => {
 };
 
 import type { Container } from 'tsparticles-engine'
-import particles from '~/data/particlesjs-config.json'
 
 const onLoad = (container: Container) => {
     // Do something with the container
