@@ -26,9 +26,6 @@ WORKDIR /app
 COPY --from=builder /app/.output /app/.output
 COPY --from=builder /app/package*.json ./
 
-# Exposer le port
-EXPOSE 3000
-
 # Définir les variables d'environnement
 ENV HOST=0.0.0.0
 ENV PORT=3000

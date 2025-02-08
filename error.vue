@@ -16,6 +16,7 @@
                 <div class="error__content">
                     <div class="text-primary text-h3">Dang</div>
                     <div class="text-primary text-h2">Error {{ error?.statusCode }}</div>
+                    <div class="text-disabled text-h5">Error {{ error?.message }}</div>
                     <p class="text-h4">It looks like something broke.</p>
                     <p class="text-h5">Sorry about that.</p>
                     <div>
@@ -38,14 +39,6 @@ const handleError = () => {
         redirect: '/',
     });
 };
-
-import type { Container } from 'tsparticles-engine'
-
-const onLoad = (container: Container) => {
-    // Do something with the container
-    container.pause()
-    setTimeout(() => container.play(), 2000)
-}
 </script>
 
 <style lang="scss" scoped>
