@@ -9,10 +9,10 @@ export const useElementStore = defineStore("elementStore", {
         title: "About me",
         link: "/about-me",
       },
-      // {
-      //   title: "Projects",
-      //   link: "/projects",
-      // },
+      {
+        title: "Projects",
+        link: "/projects",
+      },
     ] as any[],
   }),
   actions: {

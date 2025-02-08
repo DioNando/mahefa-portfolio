@@ -5,15 +5,14 @@
       <div>
         <p class="text-h5 text-end font-weight-bold">What about me</p>
         <p>
-          Proven track record in managing end-to-end development projects, from
-          initial conception through to successful deployment. My technical
-          expertise centers on web and mobile development, with particular
-          proficiency in JavaScript, PHP, and Java. This is complemented by a
-          strong foundation in UX/UI design, enabling me to deliver solutions
-          that are both technically robust and user-centric. My strengths
-          include collaborative teamwork, quick adaptability, and strong
-          analytical skills - assets I'm eager to leverage to help your
-          organization achieve its business objectives.
+          Confident in my ability to lead development projects from A to Z, from
+          the design phase to deployment. My technical expertise revolves around
+          web and mobile development, particularly JavaScript, PHP, and Java. It
+          is also enriched by a strong focus on UX/UI design, allowing me to
+          create solutions that are both functional and user-centered. My
+          enthusiasm for teamwork, responsiveness, and analytical mindset are
+          assets I wish to bring to your organization to help address your
+          business challenges.
         </p>
       </div>
       <div class="d-none d-md-block">

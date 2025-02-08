@@ -1,9 +1,9 @@
 <template>
   <v-container>
     <UiLandscape />
-    <!-- <UiProject /> -->
-    <UiSkill />
+    <UiProject />
     <UiStory />
+    <UiSkill />
     <UiEducation />
     <UiContact />
   </v-container>

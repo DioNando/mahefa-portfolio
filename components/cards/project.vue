@@ -4,9 +4,10 @@
     variant="outlined"
   >
     <div class="d-flex flex-column ga-3">
-      <div class="card__image">
+      <!-- <div class="card__image">
         <img :src="selectedPhoto.source" alt="project image" />
-      </div>
+      </div> -->
+      <div class="pb-2"></div>
       <div class="px-5 d-flex flex-column">
         <div>
           <p class="text-h5 font-weight-bold card--title">
