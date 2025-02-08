@@ -1,12 +1,12 @@
 <template>
   <v-container>
     <TextsTitle :title="'Projects.'" />
-      <div class="about">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, repellat
-        dignissimos dolores dicta reprehenderit voluptatibus perspiciatis
-        exercitationem, qui, eaque sed consequuntur minima ad nesciunt modi
-        quasi unde incidunt culpa magni.
-      </div>
+    <div class="description">
+      Here are the projects I have worked on, showcasing my skills in full-stack
+      development, UI/UX design, DevOps, and mobile development. Each project
+      reflects my ability to design, develop, and deploy scalable and efficient
+      solutions.
+    </div>
     <UiAside />
   </v-container>
 </template>
@@ -18,7 +18,7 @@
   @extend %section-accueil;
 }
 
-.about {
+.description {
   font-size: large;
   width: 100%;
 

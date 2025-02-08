@@ -29,12 +29,11 @@
       { "name": "Adaptability" },
       { "name": "Creativity" },
       { "name": "Problem-solving" },
-      { "name": "Critical thinking" },
-      { "name": "Communication" }
+      { "name": "Critical thinking" }
     ]
   },
   {
-    "title": "DevOps & Containerization",
+    "title": "DevOps & Tools",
     "details": [
       { "name": "Docker" },
       { "name": "Kubernetes" },
