@@ -7,7 +7,6 @@ export default defineNuxtConfig({
   build: {
     transpile: ["vuetify"],
   },
-
   modules: [
     (_options, nuxt) => {
       nuxt.hooks.hook("vite:extendConfig", (config) => {
@@ -22,13 +21,23 @@ export default defineNuxtConfig({
     "nuxt-aos",
     "nuxt-particles",
   ],
-
   runtimeConfig: {
     public: {
       emojisApiUrl: process.env.EMOJIS_API_URL,
     },
   },
-
+  app: {
+    head: {
+      link: [
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css2?family=Poppins&display=swap",
+        },
+      ],
+    },
+    pageTransition: { name: "page", mode: "out-in" },
+    layoutTransition: { name: "layout", mode: "out-in" },
+  },
   vite: {
     vue: {
       template: {
@@ -38,18 +47,12 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          api: 'modern-compiler',
+          api: "modern-compiler",
           additionalData:
             '@use "~/assets/scss/_variables.scss" as *; @use "~/assets/scss/_placeholders.scss" as *; @use "~/assets/scss/_mixins.scss" as *; @use "~/assets/scss/_animations.scss" as *; @use "sass:color";',
         },
       },
     },
   },
-
   css: ["~/assets/scss/style.scss"],
-
-  app: {
-    pageTransition: { name: "page", mode: "out-in" },
-    layoutTransition: { name: "layout", mode: "out-in" },
-  },
 });
