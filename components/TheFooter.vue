@@ -19,7 +19,7 @@
           {{ l.title }}
         </NuxtLink>
       </div>
-      <div class="text-body-1">Follow me or contact me.</div>
+      <div class="text-body-1">Follow me or contact me and let's work together.</div>
       <div class="icon text-center d-flex align-center ga-6 mt-6 d-none">
         <NuxtLink
           v-for="(item, index) of links"
@@ -32,7 +32,7 @@
             :icon="item.icon"
             size="large"
             class="link-icon"
-            :color="theme.isDark ? 'secondary' : 'light'"
+            :color="theme.isDark ? 'secondary' : 'white'"
           >
           </v-icon>
         </NuxtLink>
@@ -133,9 +133,10 @@ p {
 }
 
 .link-icon {
-    transition-duration: 250ms;
-    &:hover {
-      color: $tertiary;
-    }
+  transition-duration: 250ms;
+  &:hover {
+    color: $tertiary;
+    transform: translateY(-3px);
   }
+}
 </style>

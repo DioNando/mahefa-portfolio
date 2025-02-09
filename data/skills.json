@@ -58,8 +58,8 @@
     "details": [{ "name": "WordPress" }, { "name": "WooCommerce" }]
   },
   {
-    "title": "Methodologies & Modeling",
-    "details": [{ "name": "Agile" }, { "name": "SCRUM" }, { "name": "UML" }, { "name": "Merise" }]
+    "title": "Methodologies",
+    "details": [{ "name": "Agile" }, { "name": "Scrum" }, { "name": "Kanban" }, { "name": "UML" }, { "name": "Merise" }]
   },
   {
     "title": "Project Management",

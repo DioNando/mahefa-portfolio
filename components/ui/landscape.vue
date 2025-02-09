@@ -43,7 +43,8 @@
           <p>UI/UX Designer</p>
           <p>Graphist</p>
         </div>
-        <div class="d-flex align-center ga-3">
+        <div class="d-flex align-center ga-5">
+          <ButtonsResume id="landscape__btn" />
           <ButtonsStartup id="landscape__btn" class="d-none d-md-block" />
         </div>
       </v-col>
